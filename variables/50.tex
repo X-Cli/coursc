@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les énumérations~II} 
+  
+  Le défaut de cette approche est que le typage est plutôt faible~: la couleur est un entier, pas une couleur. Si
+  cela ne change rien au niveau technique, c'est le niveau sémantique (et donc la lisibilité) qui en pâtit.
+  \vspace{0.3cm}
+  \par
+  Prenons l'exemple d'une fonction modifiant la couleur d'une voiture fournie en paramètre. Son prototype serait~:
+  \begin{verbatim}
+int setCarColor(struct Car *car, int c);\end{verbatim}
+  \vspace{0.3cm}
+  \par
+  On peut s'interroger sur cet \verb|int| utilisé comme paramètre.
+  \par
+  Par ailleurs, il faut définir les couleurs unes à unes, en prenant en charge leur numérotation manuellement.
+  Tout ceci est fastidieux et peu expressif.
+\end{frame}
+

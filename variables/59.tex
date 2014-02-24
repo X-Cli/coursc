@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les unions~III}
+
+  {\small\begin{exampleblock}{Exemple d'une union anonyme dans une structure}
+    \begin{verbatim}
+struct Storage {
+  // union anonyme
+  union {
+    int a;
+    float b;
+  } value;
+  // enumeration anonyme
+  enum { 
+    intVal, 
+    floatVal 
+  } type;
+};
+struct Storage s;
+s.value.a = 3;
+s.type = intVal;\end{verbatim}
+  \end{exampleblock}}
+\end{frame}

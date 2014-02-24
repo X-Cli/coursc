@@ -1,0 +1,26 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les opérateurs de calculs et d'affectations simultanés} 
+
+  La plupart des opérateurs de calcul possèdent un raccourci quand le résultat de l'opération est affecté à une variable qui se trouve être son opérande gauche.
+  \vspace{0.3cm}
+  \par
+  Dans ce cas, on utilise également un opérateur d'arité 2, dont la syntaxe est le symbole de l'opération désirée suivi du symbole ``=''. L'opérande de gauche subit 
+  l'opération avec l'opérande droit et reçoit le résultat de cette opération.
+  \begin{exampleblock}{Exemple de l'addition}
+    \begin{verbatim}
+int a = 5;
+a += 2; // équivalent à a = a + 2\end{verbatim}
+  \end{exampleblock}
+  Voici la liste des opérateurs permettant ce raccourci~:
+  \begin{center}
+    \begin{tabular}{|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|>{\centering\arraybackslash}m{1.5cm}|}
+      \hline
+      += & -= & *= & /= & \%= \\
+      \hline
+      \&= & |= & \^{ }= & $<<$= & $>>$= \\
+      \hline
+    \end{tabular}
+  \end{center}  
+\end{frame}
+

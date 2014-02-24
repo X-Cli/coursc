@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les énumérations~VII} 
+
+  \begin{alertblock}{Faible typage des énumérations !}
+    Le C n'est cependant pas un langage au typage très fort. Toutes ces constantes restent des \verb|int| et sont
+    malheureusement compatibles entre elles !
+    \vspace{0.3cm}
+    \par
+    Le code suivant, par exemple ne provoquera aucune erreur !
+    \par
+    \begin{verbatim}
+enum color { red, blue, green };
+enum ingredients { cheese, mushrooms, tomato };
+enum color myColor;
+
+myColor = cheese; // Aucune erreur ni warning
+myColor = 254; // Ici non plus :(\end{verbatim}
+  \end{alertblock}
+\end{frame}
+

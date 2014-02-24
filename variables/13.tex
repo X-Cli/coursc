@@ -1,0 +1,17 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Vie et mort des variables~IV}
+  
+  \verb|globalVar| est une variable globale. Elle est accessible partout dans le programme (dans la fonction \verb|toto()| et dans la fonction \verb|main()|).
+  \vspace{0.5cm}
+  \par
+  \verb|argc|, \verb|argv|, \verb|localVar1| sont des variables locales à la fonction \verb|main()|. Elles sont accessibles partout dans la fonction \verb|main()|.
+  \vspace{0.5cm}
+  \par
+  \verb|localVar1| est une variable locale à la fonction \verb|toto()|. Seule la fonction \verb|toto()| peut accéder à cette variable. 
+  Cette variable occupe un emplacement mémoire distinct de la variable éponyme de la fonction \verb|main()|.
+  \vspace{0.5cm}
+  \par
+  La variable \verb|localVar2| est locale au block \verb|if|. Elle cesse d'exister dès l'accolade fermante du block \verb|if|.
+\end{frame}
+

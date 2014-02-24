@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~V}
+
+  Chaque partie du for peut être vide.
+  \par
+  Si la partie initialisation est vide, il n'y a pas d'initialisation avant l'exécution de la boucle.
+  \par
+  Si la partie incrémentation est vide, il n'y a pas d'incrémentation avant l'évaluation de la condition, à chaque tour de boucle.
+  \par
+  Si la partie condition est vide, la condition est évaluée à vraie. On obtient une boucle infinie.
+  
+  {\small\begin{exampleblock}{Boucle infinie}
+    \begin{verbatim}
+for(;;) {
+  // instructions exécutées à l'infini
+}\end{verbatim}
+  \end{exampleblock}}
+  \begin{alertblock}{Boucles infinies}
+    Les boucles infinies sont à éviter absolument. Elles sont employées dans certains cas d'optimisation algorithmique avancée.
+  \end{alertblock}
+\end{frame}
+

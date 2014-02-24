@@ -1,0 +1,17 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les unions~I}
+  Pour stocker en mémoire une structure, la place occupée par chacun de ses membres est sommée afin de déterminer
+  la taille totale que chaque variable de ce type structuré occupe. S'y ajoute, pour une sombre histoire 
+  d'\href{http://fr.wikipedia.org/wiki/Alignement_en_m\%C3\%A9moire}{\textcolor{blue}{\underline{alignement mémoire}}},
+  quelques octets dans certains cas, mais nous ignorerons ce détail, pour des raisons de simplification. 
+  \vspace{0.5cm}
+  \par
+  Ainsi, pour une structure X, composée de deux membres a (un \verb|int|) et b (un \verb|double|), la taille 
+  d'une variable Y de type \verb|struct X| est de 12 octets (taille d'un int + taille d'un double, soit $4 + 8$).
+  \vspace{0.5cm}
+  \par
+  Les membres \verb|Y.a| et \verb|Y.b| occupent deux emplacements de 4 et 8 octets en mémoire distincts et contigües 
+  et pouvant stocker deux valeurs indépendantes.
+\end{frame}   
+

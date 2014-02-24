@@ -1,0 +1,17 @@
+\begin{frame}%[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Qu'est ce qu'un tableau ?}
+
+  Un tableau est une zone mémoire composée de un ou plusieurs espaces mémoire contigües, chacun de la taille du type de données du tableau.
+  \vspace{0.3cm}
+  \par
+  Ils peuvent être locaux à une fonction, globaux, statiques, alloués statiquement (taille fixée) ou dynamiquement.
+  \vspace{0.3cm}
+  \par
+  En C89, la taille des tableaux doit être une \textbf{constante} numérique entière, ou ils doivent être alloués dynamiquement avec 
+  une fonction de la famille \texttt{malloc} ou la fonction \texttt{alloca} (spécifique à GLIBC). 
+  \vspace{0.3cm}
+  \par
+  Depuis C99 (et en C++), une expression peut être utilisée pour déclarer la taille d'un tableau.
+\end{frame}
+

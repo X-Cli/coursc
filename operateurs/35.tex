@@ -1,0 +1,37 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les opérateurs de calculs et d'affectations simultanés} 
+
+  Comme en mathématique où l'on résout les multiplications avant les additions, excepté si des parenthèse modifient l'ordre de résolution, il existe un ordre de priorité
+  des opérateurs en C. Voici les priorités par ordre décroissant de priorité~:
+  \begin{center}
+    {\footnotesize\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+      \hline
+      -- & ++ & ! & $\sim$val & -val & & & & & &  \\
+      \hline
+      * & / & \% &  &  &  &  &  &  &  &  \\
+      \hline
+      + & - &  &  &  &  &  &  &  &  &  \\
+      \hline
+      $<<$ & $>>$ &  &  &  &  &  &  &  &  &  \\
+      \hline
+      < & <= & >= & > &  &  &  &  &  &  &  \\
+      \hline
+      == & != &  &  &  &  &  &  &  &  &  \\
+      \hline
+      \& &  &  &  &  &  &  &  &  &  &  \\
+      \hline
+      \^{ } &  &  &  &  &  &  &  &  &  &  \\
+      \hline
+      | &  &  &  &  &  &  &  &  &  &  \\
+      \hline
+      \&\& & || &  &  &  &  &  &  &  &  &  \\
+      \hline
+      ?: &  &  &  &  &  &  &  &  &  &  \\
+      \hline
+      = & += & -= & *= & /= & \%= & \&= & |= & \^{ }= & $<<$= & $>>$= \\
+      \hline
+    \end{tabular}}
+  \end{center}
+\end{frame}
+

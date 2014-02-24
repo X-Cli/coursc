@@ -1,0 +1,17 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les structures~IV} 
+
+  Il est possible d'imbriquer des structures. Dans l'exemple suivant, \verb|char *| désigne une chaine de caractères.
+  Nous les verrons plus tard dans ce cours.
+  \vspace{0.5cm}
+  \begin{exampleblock}{Imbriquation de structures}
+    \begin{verbatim}
+struct Personne {
+  char * nom;
+  char * prenom;
+  struct Date dateDeNaissance;
+};\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

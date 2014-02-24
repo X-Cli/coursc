@@ -1,0 +1,18 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les énumérations~III} 
+
+  Dans l'exemple précédent, il aurait été possible d'effectuer un typedef.
+  \vspace{0.3cm}
+  \begin{exampleblock}{Exemple de voiture colorée avec typedef}
+    \begin{verbatim}
+typedef int carcolor_t;
+int setCarColor(struct Car *car, carcolor_t c);\end{verbatim}    
+  \end{exampleblock}
+  \vspace{0.3cm}
+  \par
+  Fort heureusement, tout ceci a été simplifié en C~: les \textbf{énumérations} permettent de définir un nouveau
+  type contenant des constantes dont la numérotation est automatiquement prise en charge ! On ne manie donc plus
+  des chiffres, mais bien des \textbf{symboles}.
+\end{frame}
+

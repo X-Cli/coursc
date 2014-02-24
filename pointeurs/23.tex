@@ -1,0 +1,20 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur [ ]~II}
+
+  Il est possible d'allouer des tableaux à plusieurs dimensions en chainant plusieurs opérateurs crochets.
+  \vspace{0.3cm}
+  \par
+  Les deux dimensions n'ont pas besoin d'être identiques. En revanche, seules des matrices peuvent être ainsi déclarées (même nombre 
+  de ``lignes'' dans les ``colonnes'').
+  \begin{exampleblock}{Déclaration d'un tableau à 2 dimensions}
+    \begin{verbatim}
+int table[5][3];\end{verbatim}    
+  \end{exampleblock}
+  Ce tableau a 5 ``colonnes'' de 3 ``lignes''. 
+  \vspace{0.3cm}
+  \par
+  La notion de ``colonnes'' et de ``lignes'' est une simple vue, le tableau étant aplati en 
+  mémoire à une seule dimension.
+\end{frame}
+

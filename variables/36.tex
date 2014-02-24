@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~V}
+
+  \begin{alertblock}{Conversion ascendante automatique}
+    La conversion vers des types de plus grandes tailles numérique se fait automatiquement, puisqu'il n'y a pas de risque de perte de l'information.
+    \vspace{0.3cm}
+    \par
+    Il existe cependant un grand danger~: les types non signés sont plus grands que leurs versions signées. 
+    Autrement dit un \verb|int| peut être promu automatiquement en \verb|unsigned int|. 
+    \vspace{0.3cm}
+    \par
+    Cela ne pause aucun problème pour les valeurs positives, mais pour les valeurs négatives, il y a danger !!
+    \vspace{0.3cm}
+    \par
+    La valeur $-1$ vaut 32 bits à 1, dans un \verb|int|. 
+    \vspace{0.3cm}
+    \par
+    32 bits à 1 est une valeur parfaitement acceptable dans un \verb|unsigned int|~: 4294967295.    
+  \end{alertblock}
+\end{frame}
+

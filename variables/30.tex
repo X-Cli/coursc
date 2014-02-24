@@ -1,0 +1,17 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~II}
+
+  \par
+  D'autres types ont été créés dans \verb|<stdint.h>|, tels que~:
+  \begin{itemize}
+    \item \verb|int_leastX_t| et \verb|uint_leastX_t|~: le type le plus petit existant sur la machine, mais de capacité au moins égale à X bits (avec X valant 8, 16, 32 ou 64)~;
+    \item \verb|int_fastX_t| et \verb|uint_fastX_t|~: le type le plus rapide existant sur la machine, mais de capacité au moins égale à X bits (avec X valant 8, 16, 32 ou 64)~;
+    \item \verb|intmax_t| et \verb|uintmax_t|~: le type pouvant stocker les plus grandes valeurs entières disponible sur la machine.
+  \end{itemize}
+  \vspace{0.5cm}
+  \par
+  Il faut noter cependant que C99 est encore peu usité et que ces types sont rarement rencontrés. On trouve plus fréquemment des palliatifs créés avant la norme C99, comme dans la bibliothèque libgnome~: \verb|gint8_t|, \ldots  
+  
+\end{frame}
+

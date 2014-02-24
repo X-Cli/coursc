@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: if imbriqués}
+
+  Si la seule instruction d'un block if (sans else) est un if (sans else), alors ils peuvent être compactés en un seul if dont les deux conditions sont fusionnées à l'aide de l'opérateur \&\& (ET logique).
+  \begin{exampleblock}{Exemple de deux blocks if compactables}
+    \begin{verbatim}
+if(condition1) {
+  if(condition2) {
+    //instructions
+  }
+}\end{verbatim}
+  \end{exampleblock}
+  \begin{exampleblock}{Compactage des deux if}
+    \begin{verbatim}
+if(condition1 && condition2) {
+  //instructions
+}\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

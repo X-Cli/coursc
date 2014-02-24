@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les constantes nommées~III} 
+
+  Un autre type de constantes est déclarable, par l'intermédiaire des directives préprocesseur.
+  \vspace{0.5cm}
+  \par
+  La valeur de ces constantes est déterminée à la compilation et le nom de la constante est remplacée par sa valeur dans le code, avant que le programme ne soit compilé.
+  \begin{block}{Exemple de constante défini par macro}
+    \begin{verbatim}
+#define EXIT_SUCCESS 0
+int main() {
+  return EXIT_SUCCESS;
+}
+    \end{verbatim}
+  \end{block}
+  Nous reviendrons sur les macros plus tard dans ce cours.
+\end{frame}
+

@@ -1,0 +1,18 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~III} 
+
+  Les types définis par \verb|<stdint.h>| voient leurs bornes définis dans des constantes de type macro (directives préprocesseur).
+  \vspace{0.5cm}
+  \begin{itemize}
+    \item \verb|intX_t|~: \verb|INT8_MIN| et \verb|INT8_MAX| jusqu'à \verb|INT64_MIN| et \verb|INT64_MAX|~;
+    \item \verb|uintX_t|~: \verb|UINT8_MAX| jusqu'à \verb|UINT64_MAX|~;
+    \item \verb|int_leastX_t|~: \verb|INT_LEAST8_MIN| et \verb|INT_LEAST8_MAX| jusqu'à \verb|INT_LEAST64_MIN| et \verb|INT_LEAST64_MAX|~;
+    \item \verb|uint_leastX_t|~: \verb|UINT_LEAST8_MAX| jusqu'à \verb|UINT_LEAST64_MAX|~;
+    \item \verb|int_fastX_t|~: \verb|INT_FAST8_MIN| et \verb|INT_FAST8_MAX| jusqu'à \verb|INT_FAST64_MIN| et \verb|INT_FAST64_MAX|~;
+    \item \verb|uint_fastX_t|~: \verb|UINT_FAST8_MAX| jusqu'à \verb|UINT_FAST64_MAX|~;    
+    \item \verb|intmax_t|~: \verb|INTMAX_MIN| et \verb|INTMAX_MAX|~;
+    \item \verb|uintmax_t|~: \verb|UINTMAX_MAX|.
+  \end{itemize}
+\end{frame}
+

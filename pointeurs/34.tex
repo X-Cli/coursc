@@ -1,0 +1,13 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur sizeof~II}
+
+  Pour connaitre le nombre d'éléments maximum d'un tableau, il est donc possible d'utiliser l'expression suivante~:
+  \vspace{0.5cm}
+  \begin{exampleblock}{Calcul de la dimension d'un tableau}
+    \begin{verbatim}
+int tableau[] = { 1, 2, 3, 4, 5 };
+size_t tailleDuTableau = sizeof(tableau) / sizeof(int);\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

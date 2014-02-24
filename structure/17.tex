@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~V}
+
+  \par
+  Le prototype de la fonction \verb|main()| précise que le type de retour est \verb|int| (c'est-à-dire un nombre entier). 
+  \par
+  On retrouve dans notre exemple ``helloworld'' la ligne suivante~:
+  \begin{exampleblock}{helloworld.c}
+    \begin{verbatim}
+    return 0 ; 
+    \end{verbatim}
+  \end{exampleblock}
+  \par
+  Par convention, la fonction \verb|main()| renvoie 0 si l'exécution s'est terminée avec succès, ou une valeur non-nulle si l'exécution a rencontré un échec.
+  \par
+  La bibliothèque \verb|<stdlib.h>| définit également deux constantes \verb|EXIT_SUCCESS| et \verb|EXIT_FAILURE| qui peuvent être utilisées comme valeur de retour de \verb|main()|.
+\end{frame}
+

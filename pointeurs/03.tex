@@ -1,0 +1,16 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~III}
+  
+  Il est possible de déclarer plusieurs pointeurs sur une même ligne, voire de mixer pointeurs et type normal.
+  \vspace{0.5cm}
+  \par
+  Dans ce cas, il faut faire précéder l'identificateur d'un astérisque à chaque fois qu'on veut un pointeur.
+  \begin{exampleblock}{Déclaration de plusieurs variables dont des pointeurs}
+    \begin{verbatim}
+int *a, b, *c;\end{verbatim}
+  \end{exampleblock}
+  \par
+  Dans cet exemple, \texttt{a} et \texttt{c} sont des pointeurs sur int (type \texttt{int *}), et \texttt{b} est un int.
+\end{frame}
+

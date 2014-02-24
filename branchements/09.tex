@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: else if~I}
+
+  Si l'unique instruction d'un block \verb|else| est un block \verb|if| contenant un nombre arbitraire d'instructions alors il est possible de le formuler de 
+  manière plus compacte avec \verb|else if|.
+  {\small\begin{exampleblock}{Exemple de block else contenant juste un if}
+    \begin{verbatim}
+if(condition1) {
+  //instructions 1
+}
+else {
+  if{condition2) {
+    //instructions 2
+  }
+  else {
+    //instructions 3
+  }
+}\end{verbatim}
+ \end{exampleblock}}
+\end{frame}
+

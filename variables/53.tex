@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les énumérations~V} 
+
+  Il est possible, dès lors, de déclarer des variables du type énumération. Comme avec les structures, le mot-clé
+  \verb|enum| doit précéder le nom du type. Il est cependant possible d'utiliser un typedef.
+  \vspace{0.3cm}
+  \begin{exampleblock}{Exemple d'utilisation d'énumérations}
+    \begin{verbatim}
+enum CarColor { red, blue, green };
+typedef enum CarColor CarColor_t;
+
+int setCarColor(struct Car *car, enum CarColor c);
+
+enum CarColor uneCouleur;
+uneCouleur = red;
+
+setCarColor(&c, blue):\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur ->~III}
+
+  \begin{alertblock}{L'opérateur -> et les membres pointeurs}
+    L'opérateur \texttt{->} ne permet pas de déréférencer les membres pointeurs. 
+    \vspace{0.3cm}
+    \par
+    Pour cela, il faut déréférencer l'expression retournant
+    la valeur du pointeur-membre.
+  \end{alertblock}
+  \begin{exampleblock}{Déréférencement d'un pointeur membre}
+    \begin{verbatim}
+int iExemple;
+struct Exemple {
+  int * membre;
+} e;
+e.membre = &iExemple;
+*(e.membre) = 10;\end{verbatim}
+  \end{exampleblock} 
+\end{frame}
+

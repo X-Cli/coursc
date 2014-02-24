@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur [ ]~I}
+
+  Les tableaux de taille statique sont déclarés avec l'opérateur ``crochets'' \texttt{[]}.
+  \vspace{0.3cm}
+  \begin{exampleblock}{Déclaration simple d'un tableau}
+    \begin{verbatim}
+int tableauDEntiers[5]; //alloue un tableau de 5 int\end{verbatim}
+  \end{exampleblock}
+  \begin{exampleblock}{Utilisation d'une expression pour déclarer un tableau}
+    \begin{verbatim}
+bool exemple(size_t taille) {
+  if(taille > SIZE_MAX - 2) {
+    return false;
+  }
+  int tableauDEntier[taille + 2];
+  // ...
+}\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

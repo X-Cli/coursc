@@ -1,0 +1,17 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les tableaux et les fonctions~III}
+
+  Tout comme les pointeurs sur des variables locales, il n'est pas possible de faire renvoyer un tableau déclaré localement à une
+  fonction. C'est-à-dire que le mot clé \texttt{return} ne peut être suivi de l'identificateur seul d'un tableau (ce qui revient 
+  à un pointeur).
+  \vspace{0.5cm}
+  \begin{exampleblock}{Une fonction ne peut renvoyer un tableau local}
+    \begin{verbatim}
+int * exemple(){
+  int tableau[] = { 1, 2, 3 };
+  return tableau; // INVALIDE !!!
+}\end{verbatim}    
+  \end{exampleblock}
+\end{frame}
+

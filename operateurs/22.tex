@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur ==} 
+
+  Cet opérateur retourne 1 (vrai) quand les deux opérandes sont égaux, 0 (faux) sinon. Cet opérande n'altère pas ses opérandes.
+  \par
+  \begin{alertblock}{L'erreur classique !}
+    Une erreur classique des débutants est de ne mettre qu'un seul symbole = pour effectuer le test d'égalité. Dans ce cas, c'est l'affectation qui
+    est faite, et qui renvoie, comme vu précédemment, l'opérande droit.
+  \end{alertblock}
+  \begin{exampleblock}{Utilisation de l'opérateur ==}
+    \begin{verbatim}
+#include <stdbool.h>
+int a = 5, b = 5;
+char c = '5';
+bool test;   
+test = a == b; // test vaut 1 (vrai)
+test = a == c; // test vaut 0 (faux) car '5' = 53  \end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

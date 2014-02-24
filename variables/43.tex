@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les structures~IV} 
+  
+  Il est possible d'initialiser une variable d'un type structuré lors de sa déclaration.
+  \vspace{0.3cm}
+  \par
+  Pour cela, on utilise les accolades pour représenter la structure, et la virgule comme séparateur de valeurs pour les membres.
+  Les membres sont initialisés dans l'ordre de leur figuration dans la structure lors de sa déclaration.
+  \vspace{0.3cm}
+  \begin{exampleblock}{Initialisation d'une variable de type structuré}
+    \begin{verbatim}
+#include <stdint.h>    
+struct Date {
+  uint8_t jour;
+  uint8_t mois;
+  int16_t annee;
+};    
+struct Date today = { 29, 10, 2011 };\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

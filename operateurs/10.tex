@@ -1,0 +1,20 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Un point sur les parenthèses} 
+
+  En C, lorsque plusieurs opérateurs sont chainés dans une même expression, il existe des règles de priorité de résolution, tout comme en mathématiques.
+  \vspace{0.5cm}
+  \par
+  Nous verrons plus tard l'ordre de priorité des opérateurs, qui est parfois contre-intuitif. Les parenthèses peuvent être utilisées pour retirer
+  des ambiguïtés (simplifier une opération en la rendant plus lisible) ou pour forcer un changement de priorité\ldots comme en mathématiques.
+  \vspace{0.5cm}
+  \begin{exampleblock}{Exemple d'utilisation des parenthèses}
+    \par
+    La multiplication est prioritaire sur l'addition, en C. L'opération $5 * 3 + 2$ vaut 17 en mathématiques, comme en C.
+    \par
+    On peut modifier l'ordre à l'aide de parenthèse de manière classique~:
+    \begin{verbatim}
+int a = 5 * (3 + 2); // a vaut 25 \end{verbatim}   
+  \end{exampleblock}
+\end{frame}
+

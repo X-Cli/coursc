@@ -1,0 +1,75 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{TP noté - TNI}
+\author{Florian Maury}
+\date{}
+\maketitle
+
+\section{Traitement numérique des images}
+Le programme qui est fourni, avec sa mini-bibliothèque, dans l'exercice 1, permet de faire du traitement numérique des images de base.
+\par
+Les fonctions implémentées permettent :
+\begin{description}
+  \item[generateImage] La génération d'une image aléatoire
+  \item[getImageMatrix] Le chargement d'une image depuis un fichier Bitmap
+  \item[setImageMatrix] La sauvegarde d'une image dans un fichier Bitmap
+  \item[turnGrey] Convertir une image couleur en niveaux de gris
+  \item[applyThreshold] Effectuer un seuillage d'une image en niveau de gris pour obtenir une image composée uniquement de pixels noirs ou blancs (pas de demi-teintes).
+\end{description}
+\par
+Ces 4 dernières fonctions utilisent une structure nommée \textbf{ImageData} qui contient une matrice d'entier 32 bits, et ses dimensions.
+\par
+Chaque entier 32 bits représente un pixel de l'image. Les 8 bits de poids le plus fort sont le canal alpha (inutilisé dans ce format de fichier), puis les 8 bits suivants sont pour le rouge, les 8 bits suivant pour le vert, et les 8 bits de poids le plus faible sont pour le bleu.
+\par
+La matrice est représentée sous un format à une seule dimension. Il est nécessaire de faire de l'arithmétique binaire pour accéder aux cases de la matrice (voir le code de la fonction \textbf{applyThreshold} pour un exemple.
+
+
+\vspace{2cm}
+\par
+{\Large \textbf{Instructions de rendu du TP}}
+\par
+Les fichiers sources doivent être envoyés à fmaury@3il.fr et coursc@x-cli.com avant l'heure indiquée au tableau (à priori 12H).
+
+
+\section{Exercice 1}
+Intégrez les fichiers \href{http://c.x-cli.com/bmphandler.h}{bmphandler.h}, \href{http://c.x-cli.com/bmphandler.cpp}{bmphandler.cpp} et \href{http://c.x-cli.com/tp6main2011.cpp}{main.cpp} à votre projet vide.
+Placez le fichier \href{http://c.x-cli.com/image.jpg}{image.bmp} dans le répertoire Debug de votre projet (au niveau d'en dessous vos fichiers .cpp et .h.
+Créez un fichier .h qui contiendra les descriptions de vos fonctions et un fichier .c(pp) qui contiendra votre code.
+
+\section{Exercice 2}
+Ecrivez et appelez (depuis la fonction main()) une fonction qui créé un duplicata d'une structure ImageData, représentant une image, passée en paramètre. Ce duplicata occupera une zone mémoire différente de la première structure. Effectuez les ajustements nécessaires dans la fonction main().
+Cette fonction sera utile pour le reste du TP car les fonctions turnGrey et applyThreshold modifient les matrices et que nous ne souhaitons pas devoir relire dans le fichier à chaque fois qu'on a besoin d'une nouvelle copie de l'image.
+
+\section{Exercice 3}
+Ecrivez une fonction qui renvoie une structure ImageData dont toutes les composantes valent 0, sauf l'une d'entre elles. La composante qui n'est pas annulée est spécifiée en paramètre.
+Utilisez cette fonction pour sauvegarder sous trois fichiers différents une image avec seulement le rouge, seulement le bleu et seulement le vert, grâce à la fonction setImageMatrix.
+
+\section{Exercice 4}
+Ecrivez une fonction qui se base sur applyThreshold pour seuiller uniquement sur le vert (c'est à dire qu'on génère une image uniquement en noir et blanc. Un point est noir si la composante verte est supérieure à une valeur passée en paramètre).
+
+\section{Exercice 5}
+Ecrivez une fonction qui effectue l'ouverture d'une image seuillée et renvoie la matrice érodée.
+\par
+L'ouverture est une opération de traitement numérique des images qui a pour but l'érosion des contours afin d'agrandir les trous.
+\par
+Pour effectuer cette érosion, on créé une nouvelle matrice vide de taille identique à la matrice d'origine. Chaque pixel vaut 0 si l'un des 4 pixels adjacents (dans l'image d'origine) vaut 0. Un pixel vaut 0xFFFFFFFF si tous les pixels adjacents et lui-même valent 0xFFFFFFFF dans l'image d'origine. Adjacent signifie 4-connexes : le pixel d'au dessus, le pixel d'en dessous, le pixel à gauche, et le pixel à droite.
+Les pixels en bordure d'image considèrent que tous les pixels en dehors de l'image valent 0xFFFFFFFF.
+
+
+\section{Exercice 6}
+Ecrivez une fonction qui effectue la fermeture d'une image seuillée et renvoie la matrice re-remplie.
+\par
+La fermeture est une opération de traitement numérique des images qui a pour but de combler les trous d'une image seuillée.
+\par
+Pour effectuer ce remplissage, on créé une nouvelle matrice vide de taille identique à la matrice d'origine. Chaque pixel vaut 0xFFFFFFFF si l'un des 4 pixels adjacents  ou lui-même (dans l'image d'origine) vaut 0xFFFFFFFF. Un pixel vaut 0 si tous les pixels adjacents et lui-même valent 0 dans l'image d'origine.
+Les pixels en bordure d'image considèrent que tous les pixels en dehors de l'image valent 0.
+
+\end{document}
+
+

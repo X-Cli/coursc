@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur $\sim$ (non binaire)} 
+
+  Cet opérateur préfixe son opérande.
+  \vspace{0.3cm}
+  \par
+  La valeur retournée par l'opérande est transformée en son complément à 1. Autrement dit, tous ses bits à 0 passent à 1, et tous ses bits à 1 passent à 0.
+  {\small\begin{alertblock}{Attention à la taille de l'opérande !}
+    La \textbf{taille en mémoire} de l'opérande est \textbf{capitale} pour cet opérateur.
+    \par
+    Par exemple, un \verb|char| x (de taille 1 octet, soit 8 bits) de valeur 1 est représenté en mémoire par \texttt{00000001}. 
+    \par
+    $\sim$x vaut alors \texttt{11111110}.
+    \par
+    Si x était un \verb|int|, alors sa représentation en mémoire serait 31 bits à 0, et 1 bit à 1. $\sim$x serait alors 31 bits à 1, et 1 bit à 0, ce qui
+    représente la même valeur d'un point de vue ``base 10'', mais est fondamentalement différent d'un point de vue arithmétique binaire.
+  \end{alertblock}
+  \begin{exampleblock}{Exemple d'utilisation du non binaire}
+    \verb|int a = |$\sim$\verb|1; // a vaut 31 bits à 1, et un bit à 0|
+  \end{exampleblock}}
+\end{frame}
+

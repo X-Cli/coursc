@@ -1,0 +1,24 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: if~III}
+
+  Si parmi les instructions du block \verb|if| se trouvent des instructions mettant fin à un flot d'instructions, alors le code ``instructions 3'' n'est
+  pas exécutés.
+  {\small\begin{exampleblock}{Exemple d'interruption de fonction dans un block if}
+    \begin{verbatim}
+int fonctionDeTest(int v) {
+  puts("Toujours exécuté");
+  if( v < 5 ) {
+    puts("V est inférieur à 5");
+    return true; // sortie de fonction immédiate !
+  }
+  puts("Exécuté que si v n'est pas < à 5.");
+  return false; // sortie de fonction immédiate !
+}\end{verbatim}
+  \end{exampleblock}}
+  \vspace{0.3cm}
+  \par
+  D'autres instructions telles que \verb|break|, \verb|continue|, ou des appels à des fonctions mettant fin au programme, tels que \verb|exit()| ou \verb|abort()|
+  peuvent interrompre une fonction lors de son exécution.
+\end{frame}
+

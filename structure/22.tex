@@ -1,0 +1,18 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname : Les commentaires de fin de ligne}
+ 
+  Les commentaires de fin de lignes sont symbolisés par \verb|//|. 
+  \par
+  Tout ce qui suit le symbole \verb|//| est ignoré jusqu'au prochain retour à la ligne.
+  \par
+  Ce type de commentaire n'est disponible qu'en C99 et C++.
+  \begin{exampleblock}{Exemple de commentaire de fin de ligne}
+    \small\begin{verbatim}
+int main() {
+  puts("Bonjour !");
+  return 0; //XXX: should use EXIT_SUCCESS
+}\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

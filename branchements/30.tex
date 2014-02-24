@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~VI}
+
+  Il est possible d'effectuer plusieurs opérations d'initialisation et d'incrémentation en les séparant par des virgules. Ce genre de pratique est notamment vu lors
+  de l'entretien simultané de plusieurs compteurs.
+  \vspace{0.5cm}
+  \begin{exampleblock}{Deux compteurs dans une même boucle for}
+    \begin{verbatim}
+int i, j;
+for(i = 0, j = 5 ; i < 5 ; i++, j--) {
+  display(i, j);
+}\end{verbatim}
+  \end{exampleblock}
+  \vspace{0.5cm}
+  \par
+  Cette boucle afficherait 0, 1, 2, 3, 4 pour les valeurs de \verb|i|, et 5, 4, 3, 2, 1 pour les valeurs de \verb|j|.
+\end{frame}
+

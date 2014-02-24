@@ -1,0 +1,20 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur !=} 
+
+  Cet opérateur retourne 0 (faux) quand les deux opérandes sont égaux, 1 (vrai) sinon. Cet opérande n'altère pas ses opérandes.
+  \vspace{0.3cm}
+  L'opérateur d'inégalité est équivalent à l'utilisation de l'opérateur d'égalité dont le résultat serait inversé à l'aide de l'opérateur
+  non logique~: !
+  \vspace{0.3cm}
+  \begin{exampleblock}{Exemple d'utilisation de l'opérateur !=}
+    \begin{verbatim}
+#include <stdbool.h>
+int a = 5, b = 7;
+bool c;
+c = a != b; // c vaut 1 (vrai)
+c = !(a == b); // c vaut 1 (vrai)
+c = !(a != b); // c vaut 0 (faux)\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

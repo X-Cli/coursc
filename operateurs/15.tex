@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur /} 
+
+  Cet opérateur effectue la division de son opérande gauche par son opérande droit. 
+  \vspace{0.3cm}
+  \par
+  La valeur retournée est de type \verb|int| (éventuellement 
+  arrondie à l'inférieur) si les deux opérandes sont des entiers, ou de type \verb|double| si au moins l'un des opérandes est de type flottant.
+  \vspace{0.3cm}
+  {\small\begin{exampleblock}{Exemples d'utilisations de l'opérateur /}
+    \begin{verbatim}
+int a = 15, b = 7, result1;
+float c = 2.5, result2;
+result1 = 4 / 2; //result1 vaut 2
+result1 = a / b; //result1 vaut 2
+result1 = a / 8; //result1 vaut 1
+result2 = ((float) a) / 2; //result2 vaut 7,5
+result2 = a / 2.0; //result2 vaut 7,5
+result2 = a / c; //result2 vaut 6,0\end{verbatim}
+  \end{exampleblock}}
+\end{frame}
+

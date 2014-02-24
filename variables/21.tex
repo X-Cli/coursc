@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les constantes nommées~II} 
+  \begin{block}{Déclaration et initialisation de constantes}
+    \begin{verbatim}
+void toto(const int PARAMETER) {
+    const int UNKONWN_VALUE;
+    const int MAX_LIVES=9;
+    const int NB_OF_PLAYERS=PARAMETER+5;
+}\end{verbatim}
+  \end{block}
+  \par
+  \verb|UNKNOWN_VALUE| contient maintenant une valeur indéterminée et qu'on ne peut plus changer~!
+  \vspace{0.3cm}
+  \par
+  \verb|MAX_LIVES| est une constante de valeur 9.
+  \vspace{0.3cm}
+  \par
+  \verb|NB_OF_PLAYERS| est une constante de valeur 5 + la valeur de la constante \verb|PARAMETER|, passée en paramètre à la fonction (et qui se trouve être, elle-même, une constante).
+\end{frame}
+

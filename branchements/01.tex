@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: if~I}
+
+  Il est possible de diviser le flot d'exécution en branches distinctes suivant une condition~: une expression évaluée à vrai ou faux.
+  \begin{block}{Syntaxe générale d'un block if}
+    \begin{verbatim}
+// instructions 1
+if( expression ) {
+  // instructions 2
+}
+// instructions 3\end{verbatim}
+  \end{block}
+  \par
+  Une fois les instructions ``instructions 1'' exécutées, l'expression entre parenthèses est évaluée. 
+  \par
+  Si elle s'avère vraie, alors les instructions ``instructions 2'' sont exécutées à leur tour, puis les instructions ``instructions 3'' le sont également.
+  \par 
+  Si la condition s'avère fausse, alors les instructions ``instructions 2'' NE sont PAS exécutées puis les instructions ``instructions 3'' sont exécutées.
+\end{frame}
+

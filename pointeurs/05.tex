@@ -1,0 +1,18 @@
+\begin{frame}%[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur \&~I}
+  
+  L'opérateur \& permet de récupérer l'adresse mémoire à laquelle est stockée la valeur d'une variable.
+  \vspace{0.5cm}
+  \par
+  Lorsqu'on déclare une variable, on alloue plus ou moins d'octets en mémoire, en fonction du type de la variable. 
+  Si l'on met l'opérateur \& devant le nom de cette variable, lors de l'évaluation d'une expression, ce n'est plus le contenu de la 
+  variable qui est retourné, mais l'adresse mémoire à laquelle il est stocké.
+  \vspace{0.5cm}
+  \par
+  Si le type de données de la variable est stocké sur plusieurs octets, c'est l'adresse mémoire du premier octet qui est retourné.
+  \vspace{0.5cm}
+  \par
+  Le type de données renvoyé par une variable précédée de l'opérateur \& est un pointeur sur le type de données de la variable.
+\end{frame}
+

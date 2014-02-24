@@ -1,0 +1,20 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~IV}
+
+  L'expression en paramètre du \verb|switch| est testée contre les valeurs constantes de chaque \verb|case|. 
+  \vspace{0.3cm}
+  \par
+  Lorsque la constante est égale à la variable testée, le code suivant le \verb|case| sélectionné est exécuté, jusqu'à rencontrer une instruction \verb|break|. 
+  \par
+  \verb|break| signifie la sortie immédiate du block du \verb|switch|. La prochaine instruction exécutée est alors le code suivant immédiatement le block \verb|switch|.
+  \vspace{0.3cm}
+  \par
+  Si aucune constante n'est égale à l'expression testée, le cas \verb|default| est exécuté, s'il existe. Si aucun cas \verb|default| n'a été déclaré, alors aucun code du 
+  block switch n'est exécuté.
+  \vspace{0.3cm}
+  \par
+  Seules des constantes entières peuvent suivre le mot-clé \verb|case|. Ces constantes peuvent être des variables déclarées constantes (y compris des membres d'énumérations), 
+  des constantes littérales ou des macros se résolvant en constantes littérales.
+\end{frame}
+

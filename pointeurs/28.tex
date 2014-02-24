@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur [ ]~VI}
+
+  Lors de l'initialisation, une syntaxe permet de n'initialiser que certains éléments, les autres valant 0.
+  \vspace{0.3cm}
+  \par
+  Pour cela, on place entre crochet le numéro de l'élément à initialiser et on lui affecte la valeur désirée.
+  \vspace{0.3cm}
+  \par
+  En C, \textbf{les indices des tableaux commencent à 0}.
+  \begin{exampleblock}{Initialisation partielle avec indice}
+    \begin{verbatim}
+int tableau[5] = { [2] = 1, [4] = 2 };
+//équivalent à :
+int tableau[5] = {0, 0, 1, 0, 2 };\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Vie et mort des variables~III}
+  
+  \begin{block}{Exemple de portée des variables}
+    \begin{verbatim}  
+int globalVar;
+
+int toto() {
+  int localVar1 = 1;
+  return localVar1;
+}
+
+int main(int argc, char ** argv) {
+    int localVar1 = 0;
+    if(toto()) {
+      int localVar2 = 123;
+    }
+    return 0;
+}\end{verbatim}
+  \end{block}
+\end{frame}
+

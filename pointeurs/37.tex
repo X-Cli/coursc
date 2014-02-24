@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les tableaux et les fonctions~II}
+
+  \begin{exampleblock}{Passage d'un tableau à une fonction}
+    \begin{verbatim}
+int addTwo(int * tableau, size_t taille) {
+  for(size_t i = 0 ; i < taille ; i++) {
+    tableau[i] += 2;
+  }
+}
+int main() {
+  int myTab[5] = {1, 2, 3, 4, 5};
+  addTwo(myTab, sizeof(myTab)/sizeof(int));
+  return 0;
+}\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

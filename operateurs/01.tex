@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur ++} 
+  
+  Cet opérateur peut \textit{préfixer} ou \textit{suffixer} son opérande. 
+  \vspace{0.3cm}
+  \par
+  Son effet est l'\textbf{incrémentation}~: il augmente la valeur de son opérande de 1.
+  \vspace{0.3cm}
+  \par
+  Si l'opérateur préfixe l'opérande, l'opérande est incrémenté, puis sa valeur est retournée, afin que l'expression qui les contient soit évaluée à son tour.
+  \vspace{0.3cm}
+  \par
+  Si l'opérateur suffixe l'opérande, la valeur est retournée, puis l'opérande voit sa valeur incrémentée.
+  \vspace{0.3cm}
+  \begin{exampleblock}{Exemples d'utilisation de ++}
+    \begin{verbatim}
+int a = 3;
+int b = a++ + 4; // b reçoit 7, et a vaut maintenant 4
+int c = ++a + 4; // a vaut 5, et c vaut 9\end{verbatim}        
+  \end{exampleblock}
+\end{frame}
+

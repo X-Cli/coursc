@@ -1,0 +1,139 @@
+\documentclass[10pt]{article}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\addtolength{\hoffset}{-1in}
+\addtolength{\voffset}{-1.5in}
+\setlength{\oddsidemargin}{1cm}
+\setlength{\textwidth}{19cm}
+
+\setlength{\headheight}{0pt}
+\setlength{\topmargin}{1cm}
+\setlength{\textheight}{27cm}
+
+\pagestyle{empty}
+
+\title{TD 2}
+\author{Florian Maury}
+
+\begin{document}
+
+\section{Exercice}
+
+{\small
+Soit une fonction ``sigma'' qui retourne la somme de tous les nombres entre 1 et son paramètre.
+La fonction retourne 0 en cas d'erreur.
+
+Implémenter cette fonction.
+\begin{verbatim}
+unsigned int sigma(unsigned short limit);
+\end{verbatim}
+% Penser aux contrôles d'erreurs si limit < 1
+}
+
+\begin{center}
+\line(1,0){250}
+\end{center}
+
+{\small
+Ré-implémenter la même fonction pour le prototype suivant.
+\begin{verbatim}
+unsigned int sigma(unsigned int limit);
+\end{verbatim}
+% Penser aux contrôles d'erreurs si limit < 1
+%limiter avant la somme UINT_MAX - i > somme : une autre méthode, plus performante serait de calculer la valeur limite ; ici, méthode dynamique meilleure pour raisons didactiques (évolution avec malloc)
+}
+
+\section{Exercice}
+
+{\small
+Construire une structure permettant d'établir une recette contenant tout ou partie de ces ingrédients.
+\begin{itemize}
+  \item Fromages
+  \item Champignons
+  \item Epinards
+  \item Tomates
+  \item Oignons
+\end{itemize}
+}
+
+\begin{center}
+\line(1,0){250}
+\end{center}
+
+{\small
+\'Ecrire une énumération ``Ingredients'' contenant les 5 précédents ingrédients. Il faut que cette énumération permettent de stocker dans une même variable une recette.
+}
+
+\begin{center}
+\line(1,0){250}
+\end{center}
+
+{\small
+Implémenter une fonction affichant les ingrédients utilisés pour une recette.
+
+\begin{verbatim}
+void showIngredientsFromStucture(struct IngredientsStruct recipe);
+\end{verbatim}
+}
+
+{\small
+Même question pour la fonction suivante~:
+\begin{verbatim}
+void showIngredientsFromEnum(enum Ingredients recipe);
+\end{verbatim}
+}
+
+\section{Exercice}
+
+{\small
+\'Ecrire une énumération comportant 3 niveaux de TVA (5,5, 7, 19,6).
+)
+
+\begin{center}
+\line(1,0){250}
+\end{center}
+
+{\small
+Implémenter la fonction suivante qui applique la TVA à un prix hors-taxe et renvoie le prix avec TVA~:
+\begin{verbatim}
+unsigned int applyTVA(unsigned int priceExclVTA, enum VTARate rate);
+\end{verbatim}
+% Penser au dépassement d'integer
+}
+
+\section{Exercice}
+
+{\small
+\begin{verbatim}
+1. Afficher le nom
+2. Afficher le prénom
+3. Afficher age
+4. Quitter
+\end{verbatim}
+Implémenter une fonction qui affiche le précédent menu et renvoie le numéro de l'option choisie. La valeur renvoyée doit être une valeur valide du menu. Si l'utilisateur ne saisit pas une valeur valide, le programme redemande la saisie. La saisie est effectuée par l'intermédiaire de la fonction suivante~:
+
+\begin{verbatim}
+unsigned char getInputFromKeyboard();
+\end{verbatim}
+Voici le prototype de la fonction à implémenter.
+\begin{verbatim}
+unsigned char displayAndSelectOptions();
+\end{verbatim}
+}
+
+\begin{center}
+\line(1,0){250}
+\end{center}
+
+{\small
+Implémenter une fonction qui affiche ``Doe'' si l'option 1 est choisie, ``John'' si l'option est choisie, ``42 ans'' si l'option 3 est choisie, et ``Erreur'' en cas d'autre valeur.
+Voici son prototype.
+\begin{verbatim}
+void displayPersonalData(unsigned char input);
+\end{verbatim}
+}
+
+\end{document}

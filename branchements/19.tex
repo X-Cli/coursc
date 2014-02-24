@@ -1,0 +1,25 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~VII}
+
+  Si un \verb|case| ne se termine pas par un \verb|break|, le code n'en devient pas invalide. L'exécution continuera en exécutant le code dans le case suivant, jusqu'à
+  rencontrer un \verb|break|, ou la fin du block \verb|switch|.
+  \vspace{0.3cm}
+  \par
+  On dit que l'exécution \textit{déborde} dans le \verb|case| suivant.
+  {\footnotesize\begin{exampleblock}{Débordement d'un cas}
+    \begin{verbatim}
+switch(a) {
+  case 1:              // si a == 1, les instructions 1 et 2 
+    //instructions 1   // sont exécutées
+  case 2:              // si a == 2, seules les instructions 2
+    //instructions 2   // sont exécutées
+    break;
+  default:             // si a n'est pas égal à 1, 2 ou 3, alors
+    //instructions 3   // les instructions 3 et 4 sont exécutées
+  case 3:              // si a == 3, seules les instructions 4 
+    //instructions 4   // sont exécutées
+}\end{verbatim}  
+  \end{exampleblock}}
+\end{frame}
+

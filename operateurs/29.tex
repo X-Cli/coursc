@@ -1,0 +1,29 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur ||} 
+
+  Cet opérateur représente l'opérateur ``OU logique''. Il retourne 1 si au moins l'un de ses deux opérandes vaut vrai (valeur non nulle), 
+  sinon 0 (faux).
+  \par
+  Cet opérateur n'altère pas ses opérandes.
+  \vspace{0.5cm}
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      || & 0 & 1 \\
+      \hline
+      0  & 0 & 1 \\
+      \hline
+      1  & 1 & 1 \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \begin{exampleblock}{Exemple d'utilisation de l'opérateur ||}
+    \begin{verbatim}
+#include <stdbool.h>
+int a = 5, b = 8;
+bool c = (a < 7) || (b > 10); // c vaut 1 (vrai)
+    \end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

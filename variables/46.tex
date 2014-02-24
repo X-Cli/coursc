@@ -1,0 +1,20 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les structures~VI} 
+
+  Il est possible d'effectuer une déclaration de variables du type de la structure dans la foulée de la déclaration
+  de la-dite structure en faisant suivre la déclaration du nom d'une ou plusieurs variables, séparées par des 
+  virgules, avant de terminer par un point-virgule.
+  \vspace{0.3cm}
+  \begin{exampleblock}{Déclaration de variables dans la déclaration}
+    \begin{verbatim}
+struct Exemple {
+  int a;
+  int b;
+} maVar1, maVar2, maVar3;\end{verbatim}
+  \end{exampleblock}
+  \vspace{0.3cm}
+  \par
+  Les variables \verb|maVar1|, \verb|maVar2| et \verb|maVar3| sont toutes de type \verb|struct Exemple|.
+\end{frame}
+

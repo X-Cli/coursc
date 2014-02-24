@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~I}
+
+  Les pointeurs sont de simples variables de type numérique contenant une adresse mémoire. On peut recopier leur valeur de la même manière
+  qu'on peut copier n'importe quel type primitif.
+  {\small\begin{exampleblock}{Recopie d'un pointeur}
+    \begin{verbatim}
+int a = 5, *b, *c;
+b = &a;
+c = b; //recopie de pointeurs\end{verbatim}
+  \end{exampleblock}}
+  \par
+  De la même manière, quand on affecte une instance de structure, tous ses membres sont recopiés~!
+  {\small\begin{exampleblock}{Recopie des membres d'une structure}
+    \begin{verbatim}
+struct Date maDate = {11, 11, NULL}, maDate2;
+maDate2 = maDate;
+maDate.jour = 12; //ne modifie pas la valeur dans maDate2.jour
+maDate2.jour // expression valant 11\end{verbatim}
+  \end{exampleblock}}
+\end{frame}
+

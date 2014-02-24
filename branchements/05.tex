@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: if~V}
+
+  {\small\begin{exampleblock}{Deux utilisations incorrectes du branchement if}
+    \begin{verbatim}
+int exemple(int v) {
+  if(v < 5) {
+    return -1;
+  }
+  puts("Branchement sans return !");
+}     
+int exemple2(int v) {
+  int result;
+  if(v < 5) {
+    result = -1;
+  }
+  puts("result pas toujours initialisé !");
+  return result;
+}\end{verbatim}
+  \end{exampleblock}}
+\end{frame}
+

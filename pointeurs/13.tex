@@ -1,0 +1,14 @@
+\begin{frame}%[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~II}
+
+  Un problème se pose cependant quand on recopie une structure ayant des membres de type pointeur.
+  \vspace{0.5cm}
+  \par
+  Les pointeurs sont bien recopiés\ldots C'est-à-dire que la valeur qu'ils contiennent est recopiée~: l'adresse mémoire vers laquelle ils
+  pointent~!
+  \par
+  Ainsi, si les membres non-pointeurs deviennent indépendants de leur original après recopie, les membres-pointeurs continuent de
+  pointer vers la même zone mémoire~!
+\end{frame}
+

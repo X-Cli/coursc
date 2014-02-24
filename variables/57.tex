@@ -1,0 +1,19 @@
+\begin{frame}
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les unions~II}
+
+  Il existe un autre type de données, en C, très proche des structures mais au but fondamentalement différent~: 
+  les \textbf{unions}.
+  \vspace{0.3cm}
+  \par
+  Au contraire des structures dont les membres occupent une place en mémoire distincte, les membres d'une union 
+  (qui peuvent être de tous types, y compris composés) partagent le même emplacement mémoire. 
+  C'est-à-dire que pour une union X ayant deux membres a (un int) et b (un double), la taille en mémoire de 
+  l'union sera de 8 octets, soit la taille qu'occupe en mémoire le plus grand de ses membres.
+  \vspace{0.3cm}
+  \par
+  Occupant le même emplacement mémoire, seul l'un des membres d'une union peut stocker une valeur à un moment T.
+  \par
+  On utilise alors généralement une énumération et une structure pour noter quel membre contient la valeur.
+\end{frame}
+

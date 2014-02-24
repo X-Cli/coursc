@@ -1,0 +1,16 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~IV}
+  
+  Depuis C99, il est possible de déclarer le compteur i directement dans la partie initialisation de la boucle. Ce compteur a alors une durée de vie égale au corps de 
+  la boucle.
+  \vspace{0.5cm}
+  \begin{exampleblock}{Déclaration du compteur dans l'initialisation~: C99}
+    \begin{verbatim}
+for(int i = 0 ; i < 5 ; i++) {
+  display(i);
+}
+// i n'existe plus\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

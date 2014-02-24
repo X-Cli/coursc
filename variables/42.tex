@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les structures~IV} 
+
+  Chaque variable d'un même type structuré possède un espace mémoire distinct pour chacun de ses membres. Autrement dit, soit une structure avec
+  deux membres a et b, et deux variables x et y du type de cette structure, alors le membre a de la variable est distinct en mémoire du membre a 
+  de la variable y.
+  \vspace{0.3cm}
+  \par
+  Une fois qu'une variable de type structure est définie, on peut accéder à ses membres (les variables composant la structure) à l'aide
+  de l'opérateur \verb|.| (point).
+  {\small\begin{exampleblock}{Accès aux membres d'une structure}
+    \begin{verbatim}
+struct Date maDate, monAnniversaire;
+maDate.jour = 2;
+monAnniversaire.jour = 3;
+maDate.mois = 1;
+monAnniversaire.mois = maDate.mois;\end{verbatim}
+  \end{exampleblock}}
+\end{frame}
+

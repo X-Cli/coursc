@@ -1,0 +1,24 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur ! (non logique)~I} 
+
+  Cet opérateur a pour effet d'inverser un opérande logique, c'est à dire qu'il transforme une condition vraie en une condition fausse et inversement.
+  \vspace{0.3cm}
+  \par
+  En C, le type booléen n'existe pas, et même s'il est émulé avec la bibliothèque $<$stdbool.h$>$ en C99, la réalité est que :
+  \begin{itemize}
+    \item 0 vaut pour faux
+    \item 1 et toutes les autres valeurs non nulles valent pour vrai
+  \end{itemize}
+  
+  {\small\begin{exampleblock}{Exemple d'inversion logique sur un retour de fonction}
+    \begin{verbatim}
+#include <stdbool.h>
+bool estEgal(int a, int b);
+int result = ! estEgal(1, 2); // result vaut 1\end{verbatim} 
+  \end{exampleblock}}
+  \par
+  Bien que l'utilisation précédente soit courante, on rencontre encore plus souvent cet opérateur lorsqu'on souhaite inverser une condition exprimée à l'aide de certains
+  opérateurs binaires tels que $<$, $>$, \verb|==| et assimilés que nous expliquerons avant longtemps.
+\end{frame}
+

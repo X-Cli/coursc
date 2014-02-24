@@ -1,0 +1,14 @@
+\begin{frame}
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les tableaux et la recopie~III}
+
+  Il existe une exception au point précédent qui dit que la recopie doit être manuelle. 
+  \vspace{0.5cm}
+  \par
+  Si un tableau (\textbf{un tableau de taille statique~! pas un pointeur~!}) est membre d'une structure, alors lorsque la structure est
+  recopiée, le tableau et ses valeurs le sont également~! 
+  \par
+  Cette exception est valable aussi lors d'un passage de paramètre (le paramètre structuré reçoit une copie de la structure
+  dont une copie du tableau-membre).
+\end{frame}
+

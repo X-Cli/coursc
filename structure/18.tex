@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname}
+ 
+  En C, chaque instructions et déclarations sont séparées de la suivante par un \textbf{caractère de fin d'instruction}.
+  \par
+  Ce caractère est en général le \textbf{point-virgule}.
+  \par
+  Dans certains cas, la \textbf{virgule} peut également être un caractère de fin d'instruction, mais elle n'est que très rarement utilisée.
+  \begin{exampleblock}{helloworld.c}
+    \begin{verbatim}
+#include <stdio.h>
+
+int main() {
+    puts( "Hello, World" ) ; 
+    return 0 ; 
+} \end{verbatim}
+  \end{exampleblock}
+  On remarquera que les directives préprocesseur ne se terminent pas par un caractère de fin d'instruction.
+\end{frame}
+

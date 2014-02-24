@@ -1,0 +1,286 @@
+\documentclass[10pt]{article}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{acronym}
+
+\addtolength{\hoffset}{-1in}
+\addtolength{\voffset}{-1.5in}
+\setlength{\oddsidemargin}{1cm}
+\setlength{\textwidth}{19cm}
+
+\setlength{\headheight}{0pt}
+\setlength{\topmargin}{1cm}
+\setlength{\textheight}{27cm}
+
+\pagestyle{empty}
+
+\title{TP 2}
+\author{Florian Maury}
+
+\begin{document}
+\section{LFSR~: écriture d'un générateur de nombres pseudo-aléatoires}
+\begin{verbatim}
+bool getRandomBit(unsigned short seed);
+\end{verbatim}
+
+
+La fonction getRandomBit() peut être appelée de deux manières différentes~:
+\begin{itemize}
+  \item Son paramètre est non nul~: dans ce cas, le ``registre'' du générateur est initialisé avec la valeur fournie en paramètre
+  \item Son paramètre est nul~: le générateur utilise la valeur contenue actuellement dans le ``registre''
+\end{itemize}
+
+Le registre est une variable statique locale à la fonction getRandomBit() car la valeur doit être préservée d'un appel sur l'autre de la fonction.
+
+Cette fonction utilise l'implémentation de Fibonacci de LFSR.
+A chaque appel, la fonction initialise le registre avec la valeur fournie en paramètre si elle est non nulle.
+Elle sauve ensuite la valeur du bit de poids le plus faible du registre. C'est cette valeur qui sera renvoyée par la fonction à la fin du traitement.
+Les bits aux rangs 0, 2, 3, et 5 (le bit de poids le plus fort est de rang 15 et celui de poids le plus faible 0) sont XORés ensembles.
+Le registre est alors décalé (binairement) une fois à droite. Le bit généré par les XORs est OR avec le bit de poids le plus fort.
+
+\subsection{Correction}
+\begin{verbatim}
+bool getRandomBit(unsigned short seed) {
+  static unsigned short s = 0;
+  bool bGeneratedBit;
+
+  // Seeding the generator
+  if(s == 0) {
+    if(seed == 0) {
+      s = (unsigned short) time(NULL);
+    }
+    else {
+      s = seed;
+    }
+  } else if (seed != 0) {
+    s = seed;
+  }
+  
+  //bGeneratedBit = s >> 15 & 1;
+  //s = (s << 1) | ( ( ((s>>15) & 1) ^ ((s>>13) & 1) ^ ((s>>12) & 1) ^ ((s>>10) & 1)) & 1 );
+
+  bGeneratedBit = s & 1;
+  s = (s >> 1) | ( ((s & 1) ^ ((s >> 2) & 1) ^ ((s >> 3) & 1) ^ ((s >> 5) & 1)) << 15);
+  return bGeneratedBit;
+}
+\end{verbatim}
+
+\section{Générer un int pseudo-aléatoire}
+\'Ecrire un programme qui génère un entier 32 bits non signé pseudo-aléatoire à l'aide de la fonction getRandomBit précédemment écrite, initialisée avec le seed ``0x4242'' et l'affiche à l'écran à l'aide de la ligne suivante~:
+\begin{verbatim}
+printf("%d\n", entierAleatoire);
+\end{verbatim}
+
+\subsection{Correction}
+\begin{verbatim}
+int main() {
+  unsigned int iRandomValue = (unsigned int) getRandomBit(INIT_VALUE);
+  for(int i = 1 ; i < 32 ; i++) {
+    iRandomValue = (iRandomValue<<1) | (unsigned int) getRandomBit(0);
+  } 
+  printf("%d\n", iRandomValue);
+  return 0; 
+}
+\end{verbatim}
+
+\section{Fonction getRandomInt} 
+\'Ecrire une fonction qui renvoie un entier 32 bits pseudo-aléatoire. Cette fonction doit être une généralisation de la fonction du premier exercice. 
+La solution doit être plus performante que générer 32 bits en faisant 32 appels à getRandomBit (en gros, faut utiliser une boucle\ldots).
+
+\subsection{Correction}
+\begin{verbatim}
+unsigned int getRandomInt(unsigned short seed) {
+  static unsigned short s = 0;
+  unsigned int iGeneratedInt = 0;
+
+  // Seeding the generator
+  if(s == 0) {
+    if(seed == 0) {
+      s = (unsigned short) (time(NULL));
+      printf("init with time: %d\n", s);
+    }
+    else {
+      s = seed;
+    }
+  } else if (seed != 0) {
+    s = seed;
+  }
+  
+  for(int i = 0 ; i < 32 ; i++) { 
+    iGeneratedInt = (iGeneratedInt << 1) | (s & 1);
+     s = (s >> 1) | ( ((s & 1) ^ ((s >> 2) & 1) ^ ((s >> 3) & 1) ^ ((s >> 5) & 1)) << 15);
+    //iGeneratedInt = (iGeneratedInt << 1) | ((s >> 15) & 1);
+    //s = (s << 1) | ( ( ((s>>15) & 1) ^ ((s>>13) & 1) ^ ((s>>12) & 1) ^ ((s>>10) & 1)) & 1 );
+  }
+  return iGeneratedInt;
+}
+\end{verbatim}
+
+\section{Jouer avec la génération pseudo-aléatoire}
+\'Ecrire un programme qui génère un unsigned char aléatoire. Le programme vous propose ensuite de saisir au clavier une valeur entre 0 et 255 et vous indique si votre saisie est plus grande ou moins grande que le nombre pseudo-aléatoire. Si votre saisie est égale au nombre pseudo aléatoire, le programme vous affiche le message "Victoire" et quitte.
+Pour rendre le jeu intéressant, initialiser le générateur pseudo-aléatoire avec le résultat de la fonction time() (casté en unsigned short) de la bibliothèque $<$time.h$>$
+\par
+La saisie au clavier se fait à l'aide de la ligne suivante. La variable ``input'' doit être de type short !
+\begin{verbatim}
+fflush(stdin);
+scanf("%hd", &input);
+\end{verbatim}
+
+\subsection{Correction}
+\begin{verbatim}
+int main() {
+  unsigned char ucToFind = getRandomUChar(0);
+  short sGuess;
+
+  printf("Cheatcode: %d\n", ucToFind);
+  do { 
+    do {
+      puts("Try to guess:");
+      fflush(stdin);
+      scanf("%hd", &sGuess);
+    } while(sGuess < 0 || sGuess > 255);
+    if(sGuess < ucToFind) {
+      puts("Too low");
+    }
+    else if(sGuess > ucToFind) {
+      puts("Too high");
+    }
+  } while(sGuess != ucToFind);
+  puts("Victoire !!");
+  return 0; 
+}
+\end{verbatim}
+
+%\section{Décoder le message secret}
+%\'Ecrire un programme qui demande des entiers 32 bits pseudo-aléatoires (initialisation avec 0x4242) et les XOR avec des valeurs saisies au clavier. Ces valeurs sont des int, saisis avec la ligne de commande suivante :
+%\begin{verbatim}
+%fflush(stdin);
+%scanf("%d", &input);
+%\end{verbatim}
+%
+%Afficher le résultat du XOR avec la ligne de commande suivante~:
+%\begin{verbatim}
+%printf("%c%c%c%c\n", (input>>24), ((input >> 16) & ((1<<8) - 1)), ((input >> 8) & ((1<<8) - 1)), (input & ((1<<8) - 1)));
+%\end{verbatim}
+%
+%Voici la liste des entiers à saisie au clavier~:
+%\begin{itemize}
+%  \item 123
+%\end{itemize}  
+
+%#ifndef __cplusplus
+%#include <stdbool.h>
+%#endif
+%
+%#include <stdio.h>
+%#include <time.h>
+%#include <stdlib.h>
+%#define INIT_VALUE 0x4242
+%
+%bool getRandomBit(unsigned short seed) {
+%  static unsigned short s = 0;
+%  bool bGeneratedBit;
+%
+%  // Seeding the generator
+%  if(s == 0) {
+%    if(seed == 0) {
+%      s = (unsigned short) time(NULL);
+%    }
+%    else {
+%      s = seed;
+%    }
+%  } else if (seed != 0) {
+%    s = seed;
+%  }
+%
+%  bGeneratedBit = s >> 15 & 1;
+%  s = (s << 1) | ( ( ((s>>15) & 1) ^ ((s>>13) & 1) ^ ((s>>12) & 1) ^ ((s>>10) & 1)) & 1 );
+%  return bGeneratedBit;
+%}
+%
+%int getRandomInt(unsigned short seed) {
+%  static unsigned short s = 0;
+%  int iGeneratedInt = 0;
+%
+%  // Seeding the generator
+%  if(s == 0) {
+%    if(seed == 0) {
+%      printf("init with time");
+%      s = (unsigned short) time(NULL);
+%    }
+%    else {
+%      s = seed;
+%    }
+%  } else if (seed != 0) {
+%    s = seed;
+%  }
+%
+%  for(int i = 0 ; i < 32 ; i++) {
+%    //iGeneratedInt = (iGeneratedInt << 1) | (s & 1);
+%    iGeneratedInt = (iGeneratedInt << 1) | ((s >> 15) & 1);
+%    s = (s << 1) | ( ( ((s>>15) & 1) ^ ((s>>13) & 1) ^ ((s>>12) & 1) ^ ((s>>10) & 1)) & 1 );
+%  //  s = (s >> 1) | ( ( ((s>>15) & 1) ^ ((s>>13) & 1) ^ ((s>>12) & 1) ^ ((s>>10) & 1) ^ (s & 1) ) << 15 );
+%  }
+%  return iGeneratedInt;
+%}
+%
+%unsigned char getRandomUChar(unsigned short seed) {
+%  static unsigned short s = 0;
+%  unsigned char ucGeneratedUChar = 0;
+%
+%  // Seeding the generator
+%  if(s == 0) {
+%    if(seed == 0) {
+%      s = (unsigned short) (time(NULL));
+%      printf("init with time: %d\n", s);
+%    }
+%    else {
+%      s = seed;
+%    }
+%  } else if (seed != 0) {
+%    s = seed;
+%  }
+%
+%  for(int i = 0 ; i < 32 ; i++) {
+%    ucGeneratedUChar = (ucGeneratedUChar << 1) | ((s >> 15) & 1);
+%    s = (s << 1) | ( ( ((s>>15) & 1) ^ ((s>>13) & 1) ^ ((s>>12) & 1) ^ ((s>>10) & 1)) & 1 );
+%  }
+%  return ucGeneratedUChar;
+%}
+%
+%int main() {
+%  unsigned char ucToFind = getRandomUChar(0);
+%  short sGuess;
+%  unsigned int iRandomValue = (unsigned int) getRandomBit(INIT_VALUE);
+%  for(int i = 1 ; i < 32 ; i++) {
+%    iRandomValue = (iRandomValue<<1) | (unsigned int) getRandomBit(0);
+%  }
+%  printf("%d\n", iRandomValue);
+%  printf("%d\n", getRandomInt(INIT_VALUE));
+%  printf("%d\n", getRandomInt(0x1010));
+%  printf("%d\n", getRandomInt(0));
+%
+%
+%  printf("Cheatcode: %d\n", ucToFind);
+%  do {
+%    do {
+%      puts("Try to guess:");
+%      fflush(stdin);
+%      scanf("%hd", &sGuess);
+%    } while(sGuess < 0 || sGuess > 255);
+%    if(sGuess < ucToFind) {
+%      puts("Too low");
+%    }
+%    else if(sGuess > ucToFind) {
+%      puts("Too high");
+%    }
+%  } while(sGuess != ucToFind);
+%  puts("Victoire !!");
+%  return 0;
+%}
+
+
+
+\end{document}

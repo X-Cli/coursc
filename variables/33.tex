@@ -1,0 +1,18 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~II}
+  
+  Lorsqu'on affecte une valeur d'un type à une variable du même type, tout va bien. 
+  \par
+  Que se passe-t-il cependant si on affecte un \verb|int|, à une variable de type \verb|short| ? Quid d'un \verb|float| affecté à un \verb|int| ? 
+  \par
+  Si la valeur \verb|int| est supérieure à \verb|SHRT_MAX| ou inférieure à \verb|SHRT_MIN|, alors il risque 
+  d'il y avoir une perte d'information. Le compilateur émet alors parfois un warning pour vous prévenir.
+  \vspace{0.5cm}
+  \par
+  La coercition de type permet dans ce cas, et dans bien d'autres de signaler que vous prenez la responsabilité de cette conversion.
+  \vspace{0.5cm}
+  \par
+  La coercition de type s'écrit en faisant précéder une expression du type dans lequel on souhaite convertir la valeur, entre parenthèses.
+\end{frame}
+

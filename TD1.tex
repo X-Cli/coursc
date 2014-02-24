@@ -1,0 +1,86 @@
+\documentclass[10pt,twocolumn]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+
+\title{TD1}
+\author{Florian Maury}
+
+
+
+\addtolength{\hoffset}{-1in}
+\addtolength{\voffset}{-1.5in}
+\setlength{\oddsidemargin}{1cm}
+\setlength{\textwidth}{18cm}
+
+\setlength{\headheight}{0pt}
+\setlength{\topmargin}{1cm}
+\setlength{\textheight}{28cm}
+
+
+\begin{document}
+\maketitle
+
+\section{Exo 1}
+Quels types de variable faut-il utiliser dans un environnement embarqu\'e (ressources restreintes) lorsqu'on veut stocker les valeurs suivantes (calculer les valeurs s'il s'agit d'op\'erations math\'ematiques ou logiques):
+\begin{itemize}
+	  \item Le num\'ero du jour du mois auquel vous \^etes n\'es ? 
+	  \item Le nombre d'\'etudiants \`a 3IL, toutes ann\'ees confondues. 
+	  \item Un compteur affichant sur la sortie standard ``0.1, 0.2, 0.3, 0.4''
+	  \item Le solde de votre compte courant
+	  \item true (la valeur bool\'een ``vraie'')
+	  \item 257/3;
+	  \item 1024\%3;
+	  \item 32456789/9;
+	  \item {2, 3.5, 'A', -789}; 
+	  \item 'A'+3;
+	  \item 127 + 3;
+	  \item chocolat; (\'ecrire la d\'eclaration associ\'ee pour diff\'erentes ``saveurs'')
+	  \item !(245 + 12);
+	  \item 1$<<$10;
+	  \item	255 \& 4;
+	  \item 4 | 127;
+	  \item a==389;
+	  \item 128 \& 2; 
+	  \item $\sim$256;
+	  \item 34567544277546 ? 230 : -10;
+	  \item	1024$>$=3
+	  \item 1024$>>$3
+	  \item	Votre date de naissance en s\'eparant jour, mois, ann\'ee (mais regroup\'es au sein d'une m\^eme variable)
+	  \item 12376754 ou 2.5
+	  \item	Soit un flottant, soit un entier, soit un caract\`ere, soit un bool\'ean, et en plus, dans tous les cas, une \'enum\'eration qui d\'esigne le type de donn\'ee stock\'e dans la premi\`ere partie de ce type.
+	  \item	1$<<$7 + 2
+\end{itemize}
+\section{Exo 2}
+L'extrait de code suivant est il compilable ?
+\begin{verbatim}
+long lMaVar; 
+lMaVar = 'z';
+\end{verbatim}
+
+\section{Exo 3}
+Compl\'etez les op\'erations suivantes pour que la valeur apr\`es le symbole ``=>'' soit retourn\'ee ou donnez la valeur retourn\'ee
+\begin{itemize}
+\item \verb|4 ... 3 => 7|
+\item \verb|4 ... 3 => 0|
+\item \verb|... 5 => -6| 
+\item \verb|char a = 4; ++a + 3 => ...|
+\end{itemize}
+
+\section{Exo 4}
+Quel est le r\'esultat du code suivant ?
+\begin{verbatim}
+#include <stdio.h>
+int main() {
+  union { char c; short s; } test; 
+  test.s = 127; 
+  // printf effectue un affichage de type entier
+  printf(``%d'', test.c); 
+  return 0; 
+}
+\end{verbatim}
+
+\section{Exo 5}
+Prouvez par un programme C que -128 ne se code pas 11111111 mais 10000000.
+\end{document}

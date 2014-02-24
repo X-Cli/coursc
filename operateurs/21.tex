@@ -1,0 +1,28 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur \^{ }} 
+
+  Cet opérateur effectue un ``OU exclusif binaire'' (XOR) de son opérateur gauche avec son opérateur droit. Cet opérateur n'altère pas ses opérandes.
+  \vspace{0.3cm}
+  \par
+  Le XOR binaire s'effectue bit à bit entre les deux opérandes.
+  \par
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      \^{ } & 0 & 1 \\
+      \hline
+      0  & 0 & 1 \\
+      \hline
+      1  & 1 & 0 \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \begin{exampleblock}{Exemple d'utilisation de l'opérateur \^{ }}
+    \begin{verbatim}
+int a = 42, b = 12, c;
+c = a ^ b; // c reçoit 00101010 & 00001100, 
+           // soit 00100110 => 38\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

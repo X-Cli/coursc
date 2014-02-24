@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur *~I}
+
+  L'opérateur unaire (d'arité 1 donc\ldots) * permet d'accéder à la valeur stockée à l'adresse pointée par un pointeur. On appelle cette 
+  opération le \textbf{déréférencement}.
+  
+  \begin{block}{Syntaxe générale de l'opérateur *}
+    \begin{verbatim}
+*pointeur\end{verbatim}
+  \end{block}
+  
+  \begin{alertblock}{NULL-pointer derefenrencing}
+    Vous NE DEVEZ PAS déréférencer un pointeur contenant NULL ! Ce peut constituer une faille de sécurité importante.
+    \par
+    Vous DEVEZ tester que la valeur est non-nulle avant de déréférencer un pointeur, s'il y a un doute possible.  
+  \end{alertblock}
+\end{frame}
+

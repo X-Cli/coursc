@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur [ ]~VIII}
+
+  \begin{exampleblock}{Initialisation partielle d'un tableau avec indice}
+    \begin{verbatim}
+int tableau[5] = { [2] = 4, 3, 4};
+//équivalent à 
+int tableau[5] = {0, 0, 4, 3, 4};\end{verbatim}
+  \end{exampleblock}
+  \begin{alertblock}{Danger de l'initialisation avec ``crochets''}
+    La syntaxe d'initialisation avec crochets est dangereuse (source d'erreur) si elle est mixée avec un tableau dont la taille n'est pas
+    fixée par une expression. Dans ce cas, la taille du tableau est équivalente à l'indice le plus élevé + 1.
+    \begin{verbatim}int tableau[] = { [4] = 1 };
+//équivalent à 
+int tableau[5] = {0, 0, 0, 0, 1};\end{verbatim}
+  \end{alertblock}
+\end{frame}
+

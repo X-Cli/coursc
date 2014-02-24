@@ -1,0 +1,20 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur sizeof~I}
+
+  L'opérateur sizeof permet de retourner la taille d'un type de données. La taille renvoyée est exprimée en octets.
+  \vspace{0.3cm}
+  \begin{exampleblock}{Utilisation de l'opérateur sizeof}
+    \begin{verbatim}
+sizeof int
+// ou
+sizeof(int)\end{verbatim}
+  \end{exampleblock}
+  \par
+  Sur un type complexe (structures, tableaux), l'opérateur sizeof prend tout son sens car la taille n'est pas forcément facilement calculable (notamment pour les structures à cause de l'alignement mémoire).
+  \vspace{0.3cm}
+  \par
+  Sur un tableau de taille statique déclaré localement à la fonction en cours, ou globalement, l'opérateur sizeof renvoie la 
+  dimension du tableau multipliée par la taille des éléments de ce tableau.
+\end{frame}
+

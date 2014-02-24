@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~VI}
+
+  {\footnotesize\begin{exampleblock}{Exemple incorrect}
+    \begin{verbatim}
+int exemple(int a) {
+  if(a < 0) {
+    return 0;
+  }
+  switch(a) {
+    case -1:
+      return 1; // code mort
+      break;
+    case 1:
+      return 2;
+      break;
+  }
+}\end{verbatim}
+  \end{exampleblock}}
+  Si \verb|a| n'est pas négatif, ni égal à 1, la fonction n'exécute pas d'instruction \verb|return| (ce qui est une faute de programmation) !
+\end{frame}
+

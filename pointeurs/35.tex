@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les chaines de caractères}
+
+  En C, une chaine de caractères est un tableau de \texttt{char} dont le dernier caractère est la valeur 0 (ou le caractère '\verb|\|0').
+  \vspace{0.3cm}
+  \par
+  Implicitement, cela signifie qu'il est nécessaire de prévoir une case de tableau supplémentaire pour le stockage de ce caractère nul.
+  \vspace{0.5cm}
+  \par
+  Une chaine de caractères constante littérale est terminée implicitement par un caractère nul.
+  \begin{exampleblock}{Initialisation d'une chaine de caractères}
+    \begin{verbatim}
+char chaine[] = {'Y', 'O', 'U', 'P', 'I','\0' };
+char chaine2[] = {'Y', 'O', 'U', 'P', 'I', 0 };
+char chaine3[] = "Yeah";
+chaine3[2] = 'p'; 
+chaine3[3] = '\0'; // chaine3 vaut "Yep"
+chaine3[1] = '\0'; // chaine3 vaut "Y"\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

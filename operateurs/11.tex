@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur = (affectation)~I} 
+
+  Nous l'avons déjà abordé précédemment, mais cet opérateur est plus complexe qu'à premier abord.
+  \vspace{0.3cm}
+  \par
+  Cet opérateur effectue l'affectation de la valeur retournée par son opérande gauche à son opérande droit (parfois appelé \textit{LVALUE}), \textbf{puis retourne la valeur affectée}.
+  \vspace{0.3cm}
+  \par
+  Cela signifie que l'action de cet opérateur ne se résume pas à l'affectation de valeur, et génère elle-même une valeur, égale à la valeur affectée.
+  \vspace{0.3cm}
+  \par
+  Autrement dit, la ligne de code suivante génère la valeur 3~:
+  \begin{exampleblock}{L'affectation retourne une valeur}
+    \begin{verbatim}
+char a;
+a = 3; // cette expression retourne la valeur 3
+       // en plus d'affecter 3 à la variable a\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

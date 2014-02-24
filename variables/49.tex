@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les énumérations~I} 
+
+  Il est souvent souhaitable d'abstraire un mécanisme sous-jacent pour rendre le code plus expressif.
+  \vspace{0.3cm}
+  \par
+  Par exemple, imaginons que l'on parle d'une structure représentant une voiture. L'une des caractéristiques
+  de la voiture (et donc un des membres de sa structure) est sa couleur de carrosserie. Nous allons probablement
+  utiliser un code couleur pour cela (0 = rouge, 1 = bleu, 2 = vert, \ldots).
+  \vspace{0.3cm}
+  \par
+  Afin de rendre le code plus lisible, et ne pas retrouver des 0, 1, 2, \ldots dans notre code, le premier réflexe
+  pourrait être de créer des constantes globales, ou des macros.
+  \begin{exampleblock}{Constantes colorées}
+    \begin{verbatim}    
+#define COULEUR_VOITURE_BLEU 1 
+// ou 
+const int COULEUR_VOITURE_BLEU = 1;\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

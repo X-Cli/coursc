@@ -1,0 +1,14 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~II}
+
+  En arithmétique sur les pointeurs, il est important de noter qu'une addition de 1 au pointeur ne signifie pas nécessairement 
+  ``l'adresse mémoire stockée dans le pointeur + 1''. 
+  \par
+  En fait, incrémenter un pointeur revient à ajouter à l'adresse mémoire qu'il stocke \texttt{sizeof} du type de données de ce pointeur.
+  \vspace{0.3cm}
+  \par
+  Sur architecture x86, par exemple, si on incrémente un pointeur sur \texttt{int}, cela ajoute 4 à l'adresse mémoire stockée dans le
+  pointeur.
+\end{frame}  
+

@@ -1,0 +1,20 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur [ ]~V}
+
+  Si les accolades ne contiennent pas autant d'éléments que la dimension précisée entre ``crochets'', les éléments restants sont
+  initialisés à 0.
+  \vspace{0.5cm}
+  \begin{exampleblock}{Initialisation des élements restants d'un tableau à 0}
+    \begin{verbatim}
+int tableau[5] = {1, 2};
+//équivalent à 
+int tableau[5] = {1, 2, 0, 0, 0};\end{verbatim}
+  \end{exampleblock}
+  \vspace{0.5cm}
+  \begin{exampleblock}{Astuce pour initialiser tous les éléments d'un tableau à 0}
+    \begin{verbatim}
+int tableau[15] = {0};\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

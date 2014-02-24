@@ -1,0 +1,16 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les tableaux et la recopie~II}
+
+  \begin{exampleblock}{Recopie des éléments d'un tableau}
+    \begin{verbatim}
+void exemple(int * tableau, size_t taille) {
+  int tab[taille];
+  for(size_t i = 0 ; i < taille ; i++) {
+    tab[i] = tableau[i];
+  }
+  // d'autres traitements...
+}\end{verbatim}
+  \end{exampleblock}   
+\end{frame}
+

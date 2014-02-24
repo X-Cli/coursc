@@ -1,0 +1,17 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~I}
+
+  Plus tôt, nous avons utilisé l'opérateur ``crochets'' sur un pointeur, dans une fonction, suite au passage d'un tableau en paramètre.
+  \vspace{0.3cm}
+  \par
+  Cette syntaxe est valide car l'opérateur ``crochets'' n'est autre qu'un raccourci pour de l'arithmétique sur les pointeurs suivi d'un
+  déréférencement.
+  \begin{exampleblock}{Opérateur [ ] et arithmétique sur pointeurs}
+    \begin{verbatim}
+tab[i]
+// est équivalent à 
+*(tab + i)\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

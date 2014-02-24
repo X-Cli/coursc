@@ -1,0 +1,24 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur $<<$} 
+
+  Cet opérateur retourne le décalage binaire à gauche de son opérande gauche de son opérande droit nombre de fois. 
+  \par
+  Cet opérateur ne modifie pas la valeur de ses opérandes.
+  \par
+  Un décalage binaire à gauche signifie décaler tous les bits d'un rang vers la gauche, dans une représentation binaire de la variable. Le
+  bit le plus à gauche est perdu, et le bit le plus à droite est à 0.
+  \vspace{0.3cm}
+  \par
+  Par exemple, pour un \verb|unsigned char|, contenant 149, soit en binaire \texttt{10010101} (128 + 16 + 4 + 1), si on effectue 1 décalage
+  à gauche, le nombre obtenu est 42, soit en binaire \texttt{00101010}.
+  \vspace{0.3cm}
+  \par
+  \begin{exampleblock}{Example d'utilisation de l'opérateur $<<$}
+    \begin{verbatim}
+int a = 149, b;
+b = a << 2; // la valeur de a subit deux décalages à gauche
+            // b reçoit 84 (64 + 16 + 4)\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

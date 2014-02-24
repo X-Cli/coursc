@@ -1,0 +1,15 @@
+\begin{frame}
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Vie et mort des variables~I}
+
+  Une variable déclarée au sein d'un block est dite locale à ce block. Seules les instructions contenues dans ce block (et ses sous-blocks) peuvent ``voir'' cette variable et la manipuler. 
+  \vspace{0.5cm}
+  \par
+  Une fonction est un block. Toutes les variables contenues dans le block de la fonction sont dites locales à la fonction. 
+  Les paramètres d'une fonction sont considérés comme des variables locales.
+  \vspace{0.5cm}
+  \par
+  Une variable déclarée hors des fonctions (dans un fichier .c ou .h) est dite globale~: Elle est accessible en lecture et écriture par le code de toutes les fonctions.
+  
+\end{frame}
+

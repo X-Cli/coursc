@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les opérateur \&\& et ||~: Débranchement~II} 
+
+  \begin{exampleblock}{Exemples de débranchements}
+    \begin{verbatim}
+#include <stdbool.h>
+int a = 5, b = 6, c = 0;
+bool t;
+
+t = (a < 9) || ( (c = 5) < b);
+// t vaut 1, a vaut 5, b vaut 6, c vaut 0 
+ 
+t = (a > 9) && ( (c = 5) < b);
+// t vaut 0, a vaut 5, b vaut 6, c vaut 0
+
+t = (a < 9) && ( (c = 5) < b);
+// t vaut 1, a vaut 5, b vaut 6, c vaut 5\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

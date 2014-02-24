@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur ->~I}
+
+  Lorsqu'on souhaite accéder à un membre d'une structure ou d'une union pointée, il est possible d'utiliser les opérateurs * et . comme suit.
+  \begin{exampleblock}{Accès aux membres d'une structure pointée}
+    \begin{verbatim}
+short anneeActuelle = 2010;
+struct Date { 
+  unsigned char jour; 
+  unsigned char mois; 
+  short * annee;
+};
+struct Data maDate = {10, 11, NULL}, *pMaDate;
+pMaDate = &maDate;
+(*pMaDate).jour = 11;\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

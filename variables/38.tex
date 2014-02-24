@@ -1,0 +1,31 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~VII} 
+  
+  Les valeurs numériques subissent, comme l'exemple précédent nous l'a démontré, des promotions automatiques entre types.
+  \vspace{0.5cm}
+  \par
+  Voici un tableau illustrant les promotions implicites (de bas en haut)~:
+  \begin{tabular}{|m{10cm}|}
+    \hline
+    \verb|long double| \\
+    \hline
+    \verb|double| \\
+    \hline
+    \verb|float| \\
+    \hline
+    \verb|unsigned long| \\
+    \hline
+    \verb|long| \\
+    \hline
+    \verb|unsigned int| \\
+    \hline
+    \verb|int| \\
+    \hline
+  \end{tabular}
+  \vspace{0.5cm}
+  \par
+  Les types \verb#signed|unsigned char#, \verb#signed|unsigned short# sont automatiquement promus en \verb|int| lors d'une opération mathématique,
+  avant d'être éventuellement rétrogradés.
+\end{frame}
+

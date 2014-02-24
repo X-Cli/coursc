@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les tableaux et la recopie~IV}
+
+  {\small\begin{exampleblock}{Recopie d'une structure}
+    \begin{verbatim}
+struct table { char tab[50]; size_t nbElements; };
+void exemple{struct table tableau) {
+  //traitements...
+  tableau.tab[0] = 0;
+  tableau.nbElements = 0;
+} // Changements perdus : passage de param par valeur ! 
+
+int main() {
+  struct table tableau = { {1, 2, 3}, 3 }, tableau2;
+  exemple(tableau);
+  tableau2 = tableau; // tableau2 contient { {1, 2, 3}, 3 }
+  tableau2.tab[1] = 4; //tableau vaut toujours { {1, 2, 3}, 3 }
+  return 0;
+}\end{verbatim}
+  \end{exampleblock}}
+\end{frame}
+

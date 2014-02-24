@@ -1,0 +1,17 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~IV}
+  
+  S'il est assez rare de voir la dernière forme présentée dans l'exemple précédent, il est fréquent de rencontrer des pointeurs incrémentés.
+  
+  \begin{exampleblock}{Exemple d'incrémentation de pointeurs}
+    \begin{verbatim}
+//valable uniquement en ASCII et sur l'interval [a-z]
+// préférer toupper de <ctype.h>
+
+for(char * ptr = string ; *ptr != 0 ; ptr++) {
+  *ptr -= ('a' - 'A'); 
+}\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

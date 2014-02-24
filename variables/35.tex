@@ -1,0 +1,18 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~IV}
+  
+  Les coercitions de type sont également très utilisées lorsqu'on utilise des aliases de type, définis avec \verb|typedef|.
+  \begin{exampleblock}{Conversion d'un uint8\_t en unsigned char}
+    \begin{verbatim}
+uint8_t a = 8;
+unsigned char b;
+b = (unsigned char) a;    
+    \end{verbatim}
+  \end{exampleblock}
+  \vspace{0.5cm}
+  \par
+  La coercition de type est également très utilisée pour convertir des pointeurs, notamment de type \verb|void *|. 
+  \par Nous reviendrons sur ce point ultérieurement dans le cours.
+\end{frame}
+

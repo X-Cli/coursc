@@ -1,0 +1,24 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur = (affectation)~II} 
+
+  Du fait que l'affectation retourne une valeur, il est possible de chainer les affectations ou d'effectuer des affectations au milieu d'autres
+  opérations.
+  \par
+  \vspace{0.3cm}
+  {\small\begin{exampleblock}{Chainage d'affectations}
+    \begin{verbatim}
+int a, b;
+a = b = 3;\end{verbatim}
+    \verb|a| reçoit le résultat de son opérande droit \verb|b = 3|, soit la valeur 3. 
+    \par
+    \verb|b| reçoit 3.
+  \end{exampleblock}
+  \begin{exampleblock}{Affectation au milieu d'une opération}
+    \begin{verbatim}
+int a, b;
+b = (a = 4) + 2; //a vaut 4, et b vaut 6\end{verbatim}    
+    \verb|a| reçoit 4, et l'affectation renvoie 4 qui est sommé à 2, formant 6 qui est affecté à \verb|b|.
+  \end{exampleblock}}
+\end{frame}
+

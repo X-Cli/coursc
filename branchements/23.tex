@@ -1,0 +1,18 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~I}
+
+  La boucle \verb|do-while| est identique à la boucle \verb|while| à ceci près que l'évaluation de la condition est effectuée en fin de boucle. De fait, on entre
+  systématiquement dans la boucle et son block est exécuté au moins une fois.
+  \par
+  Tant que la condition reste vraie, le block est répété.
+  \begin{block}{Syntaxe générale de la boucle do-while}
+    \begin{verbatim}
+do {
+  //instructions
+} while(condition);\end{verbatim}
+  \end{block}
+  \par
+  Une subtilité~: alors que la boucle \verb|while| n'est par terminée par un point-virgule, la boucle \verb|do-while| l'est.
+\end{frame}
+

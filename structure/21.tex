@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname : Les commentaires multilignes}
+  
+  {Les commentaires multilignes sont compris entre les symboles \verb|/*| et \verb|*/|. 
+  Tout texte, y compris les retours à la ligne, situé entre ces deux symboles est un commentaire.}
+  \begin{exampleblock}{Commentaire multiligne incluant du code}
+    \small\begin{verbatim}
+int main() {
+  /* On n'affiche plus de message
+  puts("Hello World"); */
+  return 0;
+}\end{verbatim}
+  \end{exampleblock}
+  \begin{exampleblock}{Commentaire ``multiligne'' sur une partie d'une ligne}
+    \small\begin{verbatim}
+int main() {
+  puts(/*"Hello World"*/"Bonjour !");
+  return 0;
+}\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

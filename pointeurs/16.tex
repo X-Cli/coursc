@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~II}
+
+  \begin{exampleblock}{Passage de paramètre par valeur}
+    \begin{verbatim}
+int addTwo(int value) {
+  value += 2;
+  return value;
+}
+int main() {
+  int val = 1, returnedValue;
+  returnedValue = addTwo(val);
+  return returnedValue;
+}\end{verbatim}
+  \end{exampleblock}
+  \vspace{0.3cm}
+  \par
+  Dans cet exemple, la valeur de \texttt{val} est recopiée dans la variable locale à la fonction \texttt{addTwo} \texttt{value}.
+  L'addition dans \texttt{addTwo} ne modifie pas la valeur de \texttt{val}, mais uniquement celle de \texttt{value}.
+\end{frame}
+

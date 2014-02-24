@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les opérateur \&\& et ||~: Débranchement~I} 
+
+  {\small\begin{alertblock}{Débranchement}
+    Les opérateurs logiques ET et OU sont débranchants.
+    \par
+    Cela signifie que pour des raisons de performances, il a été décidé que si le premier opérande permet de décider à lui seul du résultat d'une
+    opération impliquant l'un de ces deux opérateurs, alors le deuxième opérande n'est pas évalué !
+    \vspace{0.3cm}
+    \par
+    Ne pas être évalué signifie que l'expression n'est pas du tout exécutée, et si des opérations altérant des variables ou des appels de fonction
+    sont effectués dans le deuxième opérande, ces instructions n'ont pas lieu.
+    \vspace{0.3cm}
+    \par
+    Le cas se produit si le premier opérande d'un ET logique est faux~: quelque soit la valeur du second résultat, le résultat est nécessairement
+    faux.
+    \par
+    Le cas se produit également si le premier opérande d'un OU logique est faux~: quelque soit la valeur du second résultat, le résultat est
+    nécessairement vrai.
+  \end{alertblock}}
+\end{frame}
+

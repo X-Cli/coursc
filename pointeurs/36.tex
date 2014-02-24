@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les tableaux et les fonctions~I}
+
+  Un tableau est une forme de pointeur. Si l'identificateur d'un tableau est utilisé sans l'opérateur crochets, alors l'adresse du premier
+  élément du tableau est retournée.
+  \vspace{0.3cm}
+  \par
+  De ce fait, on ne peut passer à une fonction qu'un élément du tableau (sa valeur), ou un pointeur (vers l'un des éléments du tableau).
+  \vspace{0.3cm}
+  \begin{exampleblock}{Un tableau en argument, un pointeur en paramètre}
+    \begin{verbatim}
+void exemple(int * tab);
+//...
+int tableau[4];
+exemple(tableau);\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~V}
+
+  \begin{alertblock}{Portée des variables et retour de fonction}
+    Bien qu'une fonction puisse retourner tout type y compris des pointeurs, il n'est pas possible de renvoyer un pointeur sur une
+    variable locale qu'on s'apprête à quitter. Le code suivant est \textbf{INVALIDE}~:
+    \begin{verbatim}
+int * example() {
+  int val = 5;
+  return &val;
+}\end{verbatim}
+    Le code suivant est également \textbf{INVALIDE}~:
+    \begin{verbatim}
+int * exemple(int value) {
+  value += 2;
+  return &value;
+}\end{verbatim}
+  \end{alertblock}
+\end{frame}
+

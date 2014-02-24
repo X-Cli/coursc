@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~III}
+
+  {\small\begin{exampleblock}{Recopie de pointeur}
+    \begin{verbatim}
+int year;
+struct Date maDate = {11, 11, &year}, maDate2;
+
+maDate2 = maDate;  //recopie des structures
+
+maDate.jour = 12;  //maDate.jour vaut 12, maDate2.jour vaut 11
+
+year = 2012;       //*(maDate.annee) vaut 2012, 
+                   //*(maDate2.annee) vaut 2012
+
+*(maDate.annee) = 2010; //*(maDate2.annee) vaut aussi 2010
+
+maDate.annee = NULL; //maDate2.annee pointe toujours vers year\end{verbatim}
+  \end{exampleblock}}
+\end{frame}
+

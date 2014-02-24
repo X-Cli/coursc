@@ -1,0 +1,35 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~I}
+
+  La bibliothèque \verb|<stdint.h>| définit de nouveaux types qui permettent de s'abstraire de la taille 
+  réelle en mémoire des types primitifs (qui peut varier suivant les plateformes de compilation).
+  \begin{center}
+    {\footnotesize\begin{tabular}{|c|c|c|c|}
+      \hline
+      Type & Taille & Min & Max \\
+      \hline
+      int8\_t & 8 bits & -128 & 127 \\
+      \hline
+      uint8\_t & 8 bits & 0 & 255 \\
+      \hline
+      int16\_t & 16 bits & -32768 & 32767 \\
+      \hline
+      uint16\_t & 16 bits & 0 & 65535 \\
+      \hline
+      int32\_t & 32 bits & -2147483648 & 2147483647 \\
+      \hline
+      uint32\_t & 32 bits & 0 & 4294967295 \\
+          \hline
+      int64\_t & 64 bits & -9223372036854775808 & 9223372036854775807 \\
+      \hline
+      uint64\_t & 64 bits & 0 & 1844674407370955161 \\
+      \hline
+    \end{tabular}}
+  \end{center}
+  \vspace{0.3cm}
+  \par
+  L'usage de ces types complexifie cependant légèrement l'usage des fonctions des familles \verb|printf()| et \verb|scanf()| que
+  nous verrons plus tard.  
+\end{frame}
+

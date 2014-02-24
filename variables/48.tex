@@ -1,0 +1,25 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les structures~VIII} 
+
+  {\small\begin{exampleblock}{Exemples de structures anonymes}
+    \begin{verbatim}
+typedef struct {
+  int a;
+  char b;
+} Toto;
+
+Toto maVar1;
+
+struct { 
+  char a;
+  int b;
+} maVar2;
+    \end{verbatim}
+  \end{exampleblock}}
+  \par
+  \verb|maVar1| est de type \verb|Toto|. 
+  \par 
+  \verb|maVar2| est d'un type anonyme, structure ayant deux membres \verb|a| de type \verb|char| et \verb|b|
+  de type \verb|int|.
+\end{frame}

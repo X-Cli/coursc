@@ -1,0 +1,24 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Vie et mort des variables~V}
+  
+  {\small Une variable locale statique persiste en mémoire même lorsque l'exécution quitte le block qui l'a déclarée. 
+  Cette variable n'est pas accessible en dehors de ce block, mais si l'exécution revient dans ce block, 
+  la variable contiendra la valeur qu'elle avait lorsqu'on a quitté son block.}
+  \begin{exampleblock}{Exemple d'utilisation d'une variable statique}
+    {\small\begin{verbatim}
+void countCall() {
+  static int i;
+  display(i++); // show the value of i and add 1 to it
+}
+int main() {
+    countCall(); // display 0
+    countCall(); // display 1
+    countCall(); // display 2
+    return 0;
+}
+    \end{verbatim}}
+  \end{exampleblock}
+
+\end{frame}
+

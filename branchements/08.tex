@@ -1,0 +1,24 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Imbrications}
+
+  Les blocks \verb|if| et \verb|if-else| peuvent être imbriqués à volonté, autant de fois que nécessaire, sans restriction spécifique.
+  {\footnotesize\begin{exampleblock}{Imbrication de blocks if et ses variantes}
+    \begin{verbatim}
+if(a < 5) {
+  //instructions
+  if(a > -50) {
+    //instructions
+  }
+  else {
+    //instructions
+  }
+else {
+  if(b == 2) {
+    //instructions
+  }
+  //instructions
+}\end{verbatim}
+  \end{exampleblock}}
+\end{frame}
+

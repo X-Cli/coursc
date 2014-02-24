@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~VII}
+
+  La boucle \verb|for| ne se limite cependant pas à la gestion de compteurs. Il est parfaitement possible de détourner son utilisation avec des fonctions \ldots
+  {\small\begin{exampleblock}{Boucle for utilisant des fonctions}
+    \begin{verbatim}
+for( ListElement t = getFirstElement(myList) ; 
+     hasNext(t) ; 
+     t = nextElement(t)) {
+  // traitement de la liste
+}\end{verbatim}
+  \end{exampleblock}}
+  Ou des conditions complexes \ldots
+  {\small\begin{exampleblock}{Boucle for utilisant des fonctions}
+    \begin{verbatim}
+bool mustStop = false;
+for(int i = 0 ; i < 100 && !mustStop ; i++) {
+  // instructions qui peuvent mettre mustStop à vrai
+}\end{verbatim}
+  \end{exampleblock}}
+\end{frame}
+

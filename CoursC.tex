@@ -1,0 +1,84 @@
+\documentclass[handout]{beamer}
+
+\usepackage[utf8x]{inputenc}
+\usepackage{default}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{multirow}
+%to use middle vertical alignment
+\usepackage{array}
+
+%\usetheme{Boadilla}
+%\usecolortheme{whale}
+
+\title{Le Langage C}
+\author{Florian Maury}
+\institute{3IL}
+
+%suppression de la barre de navigation
+\setbeamertemplate{navigation symbols}{}
+
+%Présentation des rappels de sommaire (léger grisement des autres sections, et puce en forme de cercles numérotés
+\setbeamertemplate{section in toc shaded}[default][40]
+\setbeamertemplate{section in toc}[circle]
+
+\AtBeginSection[]{
+\begin{frame}
+\begin{center}
+\textcolor{blue}{\Huge \secname}
+\end{center}
+\end{frame}
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+  \vspace{0.5cm}
+  \par
+  {\footnotesize\begin{center}
+    \par
+    \href{http://www.twitter.com/X\_Cli}{\textcolor{blue}{\underline{Twitter}}}
+    \vspace{0.2cm}
+    \par
+    \href{http://www.identi.ca/ixtli}{\textcolor{blue}{\underline{Status.net}}}
+    \vspace{0.2cm}
+    \par
+    \href{mailto:coursc@x-cli.com}{\textcolor{blue}{\underline{Email}}}
+    \vspace{0.2cm}
+    \par
+    \href{svn://c.svn.x-cli.com/ccourse}{\textcolor{blue}{\underline{Sources}}}
+  \end{center}}
+\end{frame}
+
+\begin{frame}
+ \tableofcontents
+\end{frame}
+
+\section{G\'en\'eralit\'es sur le C}
+
+\input{generalites/generalites}
+
+\section{Structure des programmes}
+
+\input{structure/structure}
+
+\section{Les variables}
+
+\input{variables/variables}
+
+\section{Les opérateurs}
+
+\input{operateurs/operateurs}
+
+\section{Branchements}
+
+\input{branchements/branchements}
+
+\section{Pointeurs}
+
+\input{pointeurs/pointeurs}
+
+\end{document}

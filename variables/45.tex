@@ -1,0 +1,20 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les structures~V} 
+
+  Afin d'économiser la frappe clavier, et de rendre plus lisible le code, il est possible d'effectuer un 
+  \verb|typedef| de ``\verb|struct NomStructure|''. 
+  \vspace{0.3cm}
+  \par
+  Le \verb|typedef| peut se faire au moment de la déclaration de la structure, ou dans un second temps.
+  \vspace{0.3cm}
+  {\small\begin{exampleblock}{Typedef de structures}
+    \begin{verbatim}
+    struct Toto { int a; int b; };
+    typedef struct Toto Toto;
+    typedef struct Titi { int a ; int b ;} Titi;
+    Toto monToto; //équivalent à struct Toto monToto;
+    Titi monTiti; //équivalent à struct Toto monToto;\end{verbatim}
+  \end{exampleblock}}
+\end{frame}
+

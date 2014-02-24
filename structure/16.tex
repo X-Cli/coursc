@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~IV}
+
+  \begin{alertblock}{Sortie immédiate avec return}
+    \par
+    Le mot-clé return cause la sortie \textbf{immédiate} de la fonction en cours d'exécution.
+    \par
+    Toutes les instructions du même flux d'exécution (c.f. branchements conditionnels) suivant le \verb|return| sont ignorées.
+  \end{alertblock}
+  Ainsi avec le code suivant, l'appel à \verb|puts()| ne sera jamais exécuté.
+  \begin{block}{\texttt{puts()} ignoré}
+    \begin{verbatim}
+int toto() {
+    return 0;
+    puts("Hello");
+}     \end{verbatim}
+  \end{block}
+  \par
+  Plusieurs \verb|return| peuvent être utilisés dans une même fonction avec les branchements conditionnels.
+\end{frame}
+

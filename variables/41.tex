@@ -1,0 +1,24 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les structures~III} 
+
+  \begin{exampleblock}{Exemple de déclaration d'une structure}
+    \begin{verbatim}
+struct Date {
+  unsigned char jour; // uint_fast8_t ?
+  unsigned char mois; // uint_fast8_t ?
+  short annee; // B.C. & A.C. // int_fast16_t ?
+};\end{verbatim}    
+  \end{exampleblock}
+  \vspace{0.3cm}
+  \par
+  On déclare une variable du type d'une structure déclarée en faisant précéder le nom de la variable du mot-clé 
+  \verb|struct| suivi du nom de la structure.
+  
+  \begin{exampleblock}{Déclaration d'une variable de type \texttt{struct Date}}
+    \begin{verbatim}
+struct Date maDate; // la variable maDate est de 
+                    // type struct Date\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

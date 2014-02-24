@@ -1,0 +1,20 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~I} 
+
+  Cette multitude de types, primitifs, aliasés ainsi que les types composés ne sont pas nécessairement compatibles entre eux. Selon le vieil adage, 
+  on ne peut comparer des pommes et des poires\ldots
+  \vspace{0.3cm}
+  \par 
+  Nous reviendrons plus tard sur l'opérateur d'affectation ; considérons pour l'instant que le symbole \verb|=| permet de stocker la valeur ou
+  expression à droite du symbole, dans la ``variable'' à gauche de ce dernier (on appelle cette partie une \verb|LVALUE|).
+  \vspace{0.3cm}
+  \begin{exampleblock}{Affectation d'une valeur à une variable}
+    \begin{verbatim}
+int a, b;
+a = 5; // a vaut 5, b est indéfini
+b = a; // a vaut toujours 5, mais b aussi
+a = 7; // a vaut désormais 7, b reste à la valeur 5
+       //                     affectée précédemment \end{verbatim}
+  \end{exampleblock}  
+\end{frame}

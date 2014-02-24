@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur $>>$} 
+
+  Cet opérateur retourne le décalage binaire à droite de son opérande gauche de son opérande droit nombre de fois.
+  \par
+  Cet opérateur ne modifie pas la valeur de ses opérandes.
+  \vspace{0.3cm}
+  \par
+  Lorsqu'un décalage binaire à droite est effectué, le bit le plus à droite dans la représentation binaire est perdu, les bits sont tous décalés
+  d'un rang à droite, et le bit le plus à gauche est à 0.
+  \vspace{0.3cm}
+  \begin{exampleblock}{Exemple d'utilisation de l'opérateur $>>$}
+    \begin{verbatim}
+unsigned char a = 141, b; // 141 soit 10001101 
+b = a >> 2; // b reçoit 35 soit 00100011\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

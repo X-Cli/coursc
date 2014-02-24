@@ -1,0 +1,24 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~I}
+
+  Il arrive parfois qu'on teste une même variable contre plusieurs valeurs potentielles. Pour cela, on peut chainer un \verb|if| suivi d'un nombre arbitraire de 
+  \verb|else if| pour finir optionnellement par un \verb|else| (le cas par défaut).
+  {\footnotesize\begin{exampleblock}{Test d'une même variable contre plusieurs valeurs}
+    \begin{verbatim}
+void testVal(int a) {
+  if(a == 0) {
+    //instructions 1
+  } else if(a == 1) {
+    //instructions 2  
+  } else if(a == 2) {
+  ... // signifie une ellipse dans l'exemple
+  } else if(a == 19) {
+    //instructions 20
+  } else {
+    //instructions 21 (cas par défaut)
+  }
+}\end{verbatim}
+  \end{exampleblock}}
+\end{frame}
+

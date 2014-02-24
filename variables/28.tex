@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname}
+
+  On peut définir de ``nouveaux'' types, avec pour avantages~:
+  \begin{itemize}
+    \item le renforcement du typage de votre programme
+    \item l'auto-documentation par le nom du type
+    \item une simplicité de refactorisation (i.e. changement d'un type pour passer à un autre (e.g. valeurs limites plus grandes))
+  \end{itemize}
+  \begin{exampleblock}{Exemple de définition de types}
+    \begin{verbatim}
+// Syntaxe : typedef nouveauType typeRedéfini;
+typedef unsigned int mazewidth_t;
+typedef unsigned int mazeheight_t;
+void build(mazewidth_t w, mazeheight_t h);\end{verbatim}
+  \end{exampleblock}
+  \par
+  \texttt{typedef} devient encore plus pratique lorsqu'on ``aliase'' des pointeurs ou des types composés.
+\end{frame}
+

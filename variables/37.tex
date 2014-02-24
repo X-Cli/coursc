@@ -1,0 +1,17 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~VI}
+
+  \begin{exampleblock}{Promotion automatique d'un entier négatif et son danger}
+    \begin{verbatim}
+      int a = -1;
+      unsigned int b;
+      b = a; // a vaut -1
+             // b vaut 4294967295 par promotion auto.
+    \end{verbatim}
+  \end{exampleblock}
+  \begin{block}{Vocabulaire~: coercition, casting, \ldots}  
+    En français, on parle de coercition de type. En anglais, on parle de \textbf{casting}. On ``\textbf{cast}'' une variable dans un autre type.
+  \end{block}
+\end{frame}
+

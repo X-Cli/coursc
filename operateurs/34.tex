@@ -1,0 +1,17 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur ?:} 
+
+  Cet opérateur utilise 3 opérandes. Il renvoie le deuxième opérande si la valeur du premier est vrai (valeur non nulle), et sinon il renvoie le troisième. 
+  \par 
+  L'opérande qui n'est pas renvoyé n'est pas évalué (et son code n'est donc pas exécuté).
+  \vspace{0.3cm}
+  \begin{exampleblock}{Exemple d'utilisation de l'opérateur ternaire ?:}
+    \begin{verbatim}
+int a = 2, b;
+b = a < 5 ? 3 : 6; // b reçoit 3
+b = (a < 1 || a > 5) ? 5: 9; // b reçoit 9
+b = a ? a + 5 : 0; // si a non nul, b reçoit a + 5, sinon 0\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

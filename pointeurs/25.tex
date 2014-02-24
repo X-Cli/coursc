@@ -1,0 +1,21 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur [ ]~IV}
+
+  Lors de la déclaration, si le tableau est initialisé, il est possible de ne pas préciser de dimension pour la dernière paire de
+  crochets.
+  \vspace{0.5cm}
+  \par
+  Dans ce cas, le tableau contient un nombre de cases égal aux nombres d'éléments dans l'initialisation.
+  \vspace{0.5cm}
+  \begin{exampleblock}{Initialisation d'un tableau de 4 cases sans dimension explicite}
+    \begin{verbatim}
+int tableau[] = {1, 2, 3, 4};\end{verbatim}
+  \end{exampleblock}
+
+  \begin{exampleblock}{Déclaration d'un tableau multi-dimension avec initialisation}
+    \begin{verbatim}
+int tableau[2][3] = { {1, 2, 3}, {4, 5, 6} };\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les unions~II}
+
+  L'opérateur d'accès est toujours le point. Il faut préciser quel membre reçoit une valeur, ou est lu, malgré que
+  l'on parle d'un même emplacement mémoire.
+  \vspace{0.3cm}
+  \begin{block}{Syntaxe générale d'une union}
+    \begin{verbatim}
+union NomDeLUnion {
+  int a;
+  double b;
+};
+
+union NomDeLUnion maVariable;
+maVariable.a = 2;\end{verbatim}    
+  \end{block}
+  \vspace{0.3cm}
+  \par
+  On notera que les unions sont assez rarement employées.
+\end{frame}
+

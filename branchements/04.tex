@@ -1,0 +1,17 @@
+\begin{frame}
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: if~IV}
+
+  \begin{alertblock}{Importance de la cohérence dans les branchements}
+    Il est essentiel que les différentes branches logiques d'un programme restent cohérentes entre elles.
+    \vspace{0.3cm}
+    \par
+    Si une fonction doit retourner une valeur, toutes vos branches logiques doivent retourner une valeur.
+    \vspace{0.3cm}
+    \par
+    Si une variable est utilisée après des branchements logiques qui l'initialisent, vous devez vous assurer qu'il n'existe pas un cas de figure dans 
+    lequel la variable parvient à être utilisée sans avoir été précédemment initialisée.
+  \end{alertblock}
+
+\end{frame}
+

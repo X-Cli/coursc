@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les énumérations~VI} 
+
+  Il est possible de forcer la numérotation des constantes d'une énumération. Cela peut être utile, notamment lorsqu'on
+  définit un \textit{champ de bits}. Nous reviendrons sur les champs de bits lorsque nous aborderons les opérateurs
+  binaires.
+  \vspace{0.3cm}
+  \par
+  Notons simplement la syntaxe pour le moment.
+  \begin{exampleblock}{Champ de bits avec des énumérations}
+    \begin{verbatim}
+enum OptionsVoiture {
+  opt_ABS = 1,
+  opt_Climatisation = 1<<1,
+  opt_VitresElectriques = 1<<2,
+  opt_FermetureCentralisee = 1<<3
+};
+enum OptionsVoiture myOptions;
+myOptions = opt_ABS | opt_VitresEletriques;\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

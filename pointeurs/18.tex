@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~IV}
+
+  \begin{exampleblock}{Passage de pointeurs à une fonction}
+    \begin{verbatim}
+void add(int leftOp, int rightOp, int * result) {
+  *result = leftOp + rightOp;
+}
+
+int main() {
+  int returnedValue;
+  add(5, 2, &returnedValue);
+  return returnedValue;
+}\end{verbatim}
+  \end{exampleblock}
+  \vspace{0.3cm}
+  \par
+  L'adresse de la variable \texttt{returnedValue} est passée à la fonction \texttt{add}. Celle-ci peut alors accéder à la zone mémoire de 
+  la variable \texttt{returnedValue} par déférencement du pointeur \texttt{result} qui a été initialisé par recopie du troisième argument
+  de l'appel à la fonction.
+\end{frame}
+

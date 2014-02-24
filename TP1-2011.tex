@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\addtolength{\hoffset}{-1in}
+\addtolength{\voffset}{-1.5in}
+\setlength{\oddsidemargin}{1cm}
+\setlength{\textwidth}{19cm}
+
+\setlength{\headheight}{0pt}
+\setlength{\topmargin}{1cm}
+\setlength{\textheight}{27cm}
+
+\pagestyle{empty}
+
+\title{TP 1}
+\author{Florian Maury}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Démarrer avec Visual Studio 2010}
+\begin{enumerate}
+  \item Démarrer Visual Studio C++ 2010
+  \item Choisir C++
+  \item Créer un projet par programme/exercice
+  \item Fichier -> Nouveau -> Projet -> Projet vide
+  \item Sur ``fichiers sources'', clic-droit -> ajouter -> fichier -> fichier .cpp
+\end{enumerate}
+
+\section{Exercice}
+\'Ecrire un programme permettant de calculer le reste de la division d'un premier nombre par un second. \\
+Vous devez coder cette fonctionnalité en utilisation ni / ni \%. \\
+Tous les cas doivent être envisagés.
+\par
+Pour saisir les deux nombres, vous pouvez déclarer deux \verb|int|, et utiliser \verb|scanf()| de la façon suivante~:
+\begin{verbatim}
+int leftOperand, rightOperand, result, reminder;
+scanf("%d", &leftOperand);
+scanf("%d", &rightOperand);
+\end{verbatim}
+\par
+L'affichage de la réponse peut être fait avec le code suivant~:
+\begin{verbatim}
+printf("%d divisé par %d donne %d et un reste de %d\n", leftOperand, rightOperand, result, reminder);
+\end{verbatim}
+
+Les fonctions \verb|printf()| et \verb|scanf()| nécessitent l'inclusion de la bibliothèque $<$stdio.h$>$.
+
+\section{Exercice~: Jeu de la puce}
+Une puce se déplace linéairement et toujours dans le même sens. Elle part de la position zéro. Sur son déplacement, des trous sont placés aux positions multiples de 7 et aux positions multiples de 3. Le joueur doit saisir la longueur du saut qui devra être comprise en 1 et 9 inclus.La partie s’achève lorsque la puce tombe dans un trou (partie perdue) ou lorsqu’elle a réussi à faire 10 sauts sans tomber (partie gagnée).Ecrire l’algorithme de ce petit jeu en prenant soin de ne pas afficher la position courante de la puce, mais en inscrivant à chaque itération le nombre de saut. Veillez à ce que l’utilisateur ne puisse saisir de valeurs incohérentes.
+
+
+\section{Exercice}
+Le programme suivant comporte une boucle infinie. Mais lors de l’exécution celui-ci s’arrête.
+
+\begin{verbatim}
+#include <stdio.h> 
+
+int main() {  int i; 
+  i=1; 
+  do {    i=2*i;
+  } while (i<2*i);  printf("i=%d\t2*i=%d\n",i,2*i); 
+}
+\end{verbatim}
+
+\begin{enumerate}
+  \item Taper et exécuter ce programme. 
+  \item Pourquoi l’exécution se termine-t-elle ? 
+  \item En déduire un programme pour déterminer la plus grande et la plus petite valeur que l’on peut stocker dans le type int. 
+  \item Quels sont ces valeurs ? 
+  \item Quel est le temps d’exécution de ce programme ? (utiliser la bibliothèque $<$windows.h$>$)
+  \item Proposer un second programme basé sur celui que vous venez de réaliser pour augmenter son efficacité.
+\end{enumerate}
+
+
+\section{Exercice~: Les montagnes russes}
+Ecrire un programme qui génère l’affichage suivant :
+\begin{verbatim}   *      *      *
+  ***    ***    ***
+ *****  *****  **************************
+\end{verbatim}Proposer une version qui demande à l’utilisateur le caractère à afficher, la hauteur des montagnes et le nombre de sommets.
+
+\end{document}

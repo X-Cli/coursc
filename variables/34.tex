@@ -1,0 +1,23 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~III}
+
+  \begin{exampleblock}{Exemple de conversion d'un int en short}
+    \begin{verbatim}
+void toto(int a) {
+  short b;
+  
+  // b = a aurait généré un warning
+  b = (short) a;
+  b = (short)(a + 10); //cast de a + 10 en short
+}\end{verbatim}
+  \end{exampleblock}
+  \begin{exampleblock}{Exemple de conversion d'un int en short}
+    \begin{verbatim}
+float a=3.5;
+int b;
+//b = a cause un warning
+b = (int) a; // a vaut 3,5 et b 3\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

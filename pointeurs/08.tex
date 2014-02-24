@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: L'opérateur *~II}
+
+  \begin{exampleblock}{Déréférencements de pointeurs}
+    \begin{verbatim}
+int a = 5, *b, *c, d, **e;
+b = &a; //&a renvoie un int * 
+c = b; // b et c pointent vers a
+d = *b; // d reçoit la valeur pointée par b : la valeur de a
+a = 2; // a vaut 2, d vaut toujours 5
+*b = 3; // a vaut 3, d vaut toujours 5
+d = 1; // a vaut toujours 3, d vaut 1
+c = NULL; // b pointe toujours sur a, c vaut NULL
+e = &c; // &c renvoie un int **
+*e = &d; // c reçoit l'adresse de d (int *)\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

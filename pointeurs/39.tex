@@ -1,0 +1,19 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Les tableaux et les fonctions~IV}
+
+  En revanche, une fonction peut parfaitement renvoyer un élément d'un tableau, s'il ne s'agit pas d'un pointeur sur une variable locale à 
+  cette fonction.
+  
+  \begin{exampleblock}{Retour d'un élément de tableau}
+    \begin{verbatim}
+int exemple(int * tab, size_t taille) {
+  for(size_t i = 0 ; i < taille ; i++) {
+    if(tab[i] % 2 == 0) {
+      return tab[i];
+    }
+  } 
+}\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+

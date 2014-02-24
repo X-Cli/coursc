@@ -1,0 +1,17 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~IV}
+  
+  \par
+  Le type \verb|void| n'a de sens que sous la forme de pointeur ou pour dire qu'une fonction ne retourne pas de valeur.
+  \vspace{0.5cm}
+  \par
+  Le type booléen n'existe pas en C89. On utilise généralement un \verb|char|. En C99, on peut avoir un type \verb|bool| en incluant la bibliothèque \verb|<stdbool.h>| (non disponible en C++).
+  \vspace{0.5cm}
+  \par
+  La taille d'un type, exprimée en octets, peut être connue via l'opérateur \texttt{sizeof}.
+  \vspace{0.5cm}
+  \par
+  Les bibliothèques \verb|<limits.h>| et \verb|<float.h>| contiennent les valeurs limites de chaque type primitif.
+\end{frame}
+

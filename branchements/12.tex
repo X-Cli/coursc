@@ -1,0 +1,22 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~: Code mort}
+
+  \begin{alertblock}{Attention au code mort}
+    Les branchements conditionnels peuvent devenir vite complexes à force d'imbrication. Il faut alors veiller à ne pas créer du \textbf{code mort}.
+    \vspace{0.3cm}
+    \par
+    Du code mort est du code qui ne sera jamais exécuté, quoiqu'il arrive. Ce cas intervient notamment si la condition décidant si une série d'instructions est exécutée
+    ne peut jamais devenir vraie. La détection de ce code n'est pas toujours triviale comme dans l'exemple ci-dessous.
+  \end{alertblock}
+  {\footnotesize\begin{exampleblock}{Exemple de code mort}
+    \begin{verbatim}
+if(a < 5) {
+  if(a > 50) {
+    //ce code ne sera jamais exécuté 
+  }
+  // instructions
+}\end{verbatim}
+  \end{exampleblock}}
+\end{frame}
+

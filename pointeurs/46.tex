@@ -1,0 +1,28 @@
+\begin{frame}[containsverbatim]
+  \frametitle{\secname}
+  \framesubtitle{\subsecname~III}
+  
+  {\small\begin{exampleblock}{Arithmétique binaire et équivalence~I}
+    \begin{verbatim}
+int exemple(int * tableau) {
+  return tableau[1];
+}\end{verbatim}
+  \end{exampleblock}
+
+  \begin{exampleblock}{Arithmétique binaire et équivalence~II}
+    \begin{verbatim}
+int exemple(int * tableau) {
+  return *(tableau + 1);
+}\end{verbatim}
+  \end{exampleblock}
+  
+  \begin{exampleblock}{Arithmétique binaire et équivalence~III}
+    \begin{verbatim}
+int exemple(int * tableau) {
+  return * ((int *) (((unsigned long) tableau) +
+           (sizeof (int))));;
+}\end{verbatim}
+  \end{exampleblock}}
+
+\end{frame}
+
